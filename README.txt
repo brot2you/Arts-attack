@@ -1,6 +1,6 @@
-L’Atelier — Pop Art Academy
+ARTS ATTACK! V4 — 26 octobre 2026
 
-Déposer index.html et le dossier assets à la racine du dépôt GitHub Pages.
-Tous les contenus et la progression pédagogiques de la V2 sont conservés.
-Les données élèves sont enregistrées localement dans le navigateur, pas sur un serveur.
-Les visuels SVG sont des ressources autonomes à fond transparent ou coloré, sans découpage de planche.
+Déposer index.html ET le dossier assets à la racine du dépôt GitHub Pages.
+Le ZIP est prêt : extraire puis transférer tous les fichiers.
+Les missions, questions, quiz, techniques, histoire de l’art et sauvegardes existants sont préservés.
+Pour actualiser la page après mise en ligne, recharger sans cache.
