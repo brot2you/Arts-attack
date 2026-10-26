@@ -1,8 +1,5 @@
-Arts Attack! V3 — GitHub Pages
+ARTS ATTACK! V4 — MUSÉE DES ŒUVRES
 
-Décompresser le ZIP et déposer TOUS les fichiers à la racine du dépôt GitHub Pages.
-Conserve les assets : ce ZIP est complet.
-12 missions guidées, 3 par classe, références et notices de musées, missions en 4 étapes, carnet local.
-La création peut se faire dans le Studio V2 ou hors ligne avec papier et matériaux. Les productions numériques sont exportables depuis le Studio.
-Les informations personnelles et travaux sont enregistrés uniquement dans le navigateur local (localStorage). Pas de synchronisation de compte.
-Les œuvres sont citées via leurs notices officielles externes, sans reproduction intégrée.
+Décompresser le ZIP et déposer son CONTENU à la racine GitHub Pages (index.html, style.css, app.js, v3.js, v4.js, assets/).
+La V4 conserve les fonctions V1 à V3. Les vignettes du musée sont des abstractions graphiques : les reproductions authentiques sont accessibles via les notices des musées.
+La progression est locale au navigateur.
