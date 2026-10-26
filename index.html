@@ -688,6 +688,20 @@ body:has(.creative-hero) .creative-hero .attack-character-art{
  }
 }
 
+
+/* FIX V11 — vrais éléments image et preuve de publication */
+body:has(.creative-hero) .creative-hero{position:relative!important;overflow:hidden!important;min-height:530px!important;padding:0!important;background:url('assets/home-bg-desktop.png') center/cover no-repeat!important}
+body:has(.creative-hero) .creative-hero .attack-logo-image{display:block!important;position:absolute!important;z-index:6!important;top:105px!important;left:2%!important;width:53%!important;height:310px!important;object-fit:contain!important;object-position:center!important;filter:drop-shadow(3px 4px 3px #09091555)}
+body:has(.creative-hero) .creative-hero .attack-character-image{display:block!important;position:absolute!important;z-index:5!important;right:0!important;bottom:0!important;width:48%!important;height:420px!important;object-fit:contain!important;object-position:right bottom!important;filter:drop-shadow(2px 4px 3px #09091555)}
+body:has(.creative-hero) .creative-hero>button{z-index:8!important;left:25px!important;bottom:18px!important;position:absolute!important}
+body:has(.creative-hero) .creative-hero:after{content:'ACCUEIL V11'!important;display:block!important;position:absolute!important;z-index:9!important;left:12px!important;top:80px!important;right:auto!important;padding:4px 8px!important;color:#12121c!important;background:#ffe333!important;font-size:11px!important;letter-spacing:.05em!important;border:2px solid #12121c!important}
+@media(max-width:700px){
+ body:has(.creative-hero) .creative-hero{min-height:540px!important;background-image:url('assets/home-bg-mobile.png')!important}
+ body:has(.creative-hero) .creative-hero .attack-logo-image{top:92px!important;left:2%!important;width:96%!important;height:170px!important}
+ body:has(.creative-hero) .creative-hero .attack-character-image{top:auto!important;bottom:34px!important;right:0!important;width:93%!important;height:295px!important}
+ body:has(.creative-hero) .creative-hero:after{top:70px!important}
+}
+
 </style>
 </head>
 <body>
@@ -1391,7 +1405,9 @@ body:has(.creative-hero) .creative-hero .attack-character-art{
     hero.appendChild(el('div','hero-mark','LE STUDIO CRÉATIF · 6e → 3e'));
     hero.appendChild(el('h2',null,'Bienvenue chez ARTS ATTACK!'));
     hero.appendChild(el('p',null,'EXPLORE. CRÉE. EXPOSE. · Douze missions de création, des expériences et des choix d’artiste à expliquer.')); 
-    var missionBtn=el('button',null,'JE RELÈVE UN DÉFI !');missionBtn.onclick=function(){renderStudio('6e')};hero.appendChild(missionBtn);hero.appendChild(el('div','mascot-hero',''));hero.appendChild(el('div','attack-logo-art',''));hero.appendChild(el('div','attack-character-art',''));app.appendChild(hero);
+    var missionBtn=el('button',null,'JE RELÈVE UN DÉFI !');missionBtn.onclick=function(){renderStudio('6e')};hero.appendChild(missionBtn);hero.appendChild(el('div','mascot-hero',''));var logoArt=document.createElement('img');logoArt.className='attack-logo-image';logoArt.src='ARTS-ATTACK-logo-transparent.png?v=20261026-11';logoArt.alt='ARTS ATTACK!';hero.appendChild(logoArt);
+    var characterArt=document.createElement('img');characterArt.className='attack-character-image';characterArt.src='ARTS-ATTACK-personnage-transparent.png?v=20261026-11';characterArt.alt='Personnage artiste';hero.appendChild(characterArt);
+    app.appendChild(hero);
     app.appendChild(el('h2','section-title','Choisis ton niveau'));
 
     var grid = el('div','grid');
