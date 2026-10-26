@@ -1,5 +1,8 @@
-ARTS ATTACK! V5 — COLLECTION PREMIUM
+ARTS ATTACK! — V5.1 MUSEE PREMIUM
 
-ZIP complet pour GitHub Pages. Décompresser et déposer TOUT le contenu à la racine du dépôt.
-Nouveautés : galerie pop art premium, filtres de collection, cadres Commune/Rare/Légendaire, et reproductions authentiques via API officielles uniquement quand les données confirment le domaine public. Sans connexion ou autorisation API, couvertures graphiques + liens musées conservés.
-Aucune œuvre sous droits non vérifiés n’est intégrée au ZIP. Sauvegardes et missions V4 conservées.
+Copiez TOUS les fichiers et le dossier assets à la racine GitHub Pages.
+Conserve les fonctionnalités V1–V5, progression en localStorage.
+Améliorations : zoom des reproductions vérifiées, duel avec deux zones visuelles, repli d’images fiable, contrôles tactiles.
+Les images authentiques ne sont PAS embarquées dans ce ZIP : elles dépendent des API du Met et de l’Art Institute of Chicago lorsque les catalogues confirment le domaine public. Les autres œuvres restent en couverture graphique.
+Aucun compte utilisateur, aucune donnée transmise à un serveur par le carnet.
+Ne pas confondre couverture pop art et reproduction authentique.
