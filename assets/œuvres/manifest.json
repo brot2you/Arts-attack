@@ -3,51 +3,51 @@
     "title": "Sous la vague au large de Kanagawa",
     "museum": "The Met",
     "object_id": 45434,
-    "status": "API validation required",
+    "status": "Image locale intégrée depuis le fichier utilisateur",
     "file": "wave.jpg"
   },
   "cypresses": {
     "title": "Cyprès aux blés d’or",
     "museum": "The Met",
     "object_id": 436535,
-    "status": "CC0 validated by institutional record",
+    "status": "Image locale intégrée depuis le fichier utilisateur",
     "file": "cypresses.jpg"
   },
   "sunday": {
     "title": "Un dimanche après-midi à la Grande Jatte",
     "museum": "Art Institute of Chicago",
     "object_id": 27992,
-    "status": "public domain via API",
+    "status": "Image locale intégrée depuis le fichier utilisateur",
     "file": "sunday.jpg"
   },
   "starry": {
     "title": "La Nuit étoilée",
     "museum": "MoMA",
-    "status": "No local asset yet",
+    "status": "Image locale intégrée depuis le fichier utilisateur",
     "file": "starry.jpg"
   },
   "boogie": {
     "title": "Broadway Boogie Woogie",
     "museum": "MoMA",
-    "status": "No local asset yet",
+    "status": "Image locale intégrée depuis le fichier utilisateur",
     "file": "boogie.jpg"
   },
   "yellow": {
     "title": "Jaune-rouge-bleu",
     "museum": "Centre Pompidou",
-    "status": "No local asset yet",
+    "status": "Image locale intégrée depuis le fichier utilisateur",
     "file": "yellow.jpg"
   },
   "self": {
     "title": "Autoportrait",
     "museum": "National Gallery of Art",
-    "status": "No local asset yet",
+    "status": "Image locale intégrée depuis le fichier utilisateur",
     "file": "self.jpg"
   },
   "scream": {
     "title": "Le Cri",
     "museum": "National Museum Norway",
-    "status": "No local asset yet",
+    "status": "Image locale intégrée depuis le fichier utilisateur",
     "file": "scream.jpg"
   }
 }
