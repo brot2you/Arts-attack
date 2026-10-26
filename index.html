@@ -568,139 +568,23 @@ h2.section-title,.section-title{font-family:'Space Grotesk',sans-serif!important
 @media(max-width:800px){main{margin:10px 8px 24px;padding:14px 12px 32px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mission-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.level-card:before{height:240px}.xp-bar{display:none}}
 @media(max-width:500px){header h1.brand{font-size:1.65rem}.pop-nav{position:relative;gap:2px}.pop-nav button{font-size:.69rem;flex:1 1 30%;padding:7px 4px}.creative-hero{min-height:265px;background:#00ccef url('assets/home-bg-mobile.png') center center/cover no-repeat}.creative-hero button{margin:0 0 12px 12px;font-size:.8rem;padding:9px 12px}.grid{gap:9px}.level-card{min-height:280px;border-width:3px;box-shadow:3px 4px #101323}.level-card:before{height:182px}.level-card p{font-size:.67rem!important}.mission-grid{grid-template-columns:1fr}.section-title,h2.section-title{font-size:1.15rem!important}.mission-section{padding:12px}}
 
-/* V9 — barre de navigation superposée au fond d'accueil */
-body:has(.creative-hero) > header{display:none!important}
-body:has(.creative-hero) > .pop-nav{
- position:absolute!important;top:clamp(10px,2.2vw,24px)!important;left:50%!important;
- transform:translateX(-50%);z-index:100!important;
- display:flex!important;flex-wrap:nowrap!important;align-items:center;justify-content:center;
- width:max-content;max-width:calc(100% - 28px);box-sizing:border-box;
- background:rgba(10,13,24,.87)!important;border:2px solid rgba(255,255,255,.65);
- border-radius:17px;box-shadow:0 7px 0 rgba(3,6,18,.65),0 14px 26px #03051255;
- backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:8px 10px!important;
- gap:5px!important;overflow-x:auto;scrollbar-width:none;
-}
-body:has(.creative-hero) > .pop-nav::-webkit-scrollbar{display:none}
-body:has(.creative-hero) > .pop-nav button{
- white-space:nowrap;flex:0 0 auto!important;min-height:42px;
- border:0!important;border-radius:11px;padding:9px 13px!important;
- font-size:clamp(.72rem,1.12vw,.91rem)!important;color:#fff;
- background:transparent;box-shadow:none;
-}
-body:has(.creative-hero) > .pop-nav button[data-pop=home]{background:#f81294!important;color:#fff}
-body:has(.creative-hero) > .pop-nav button:hover,
-body:has(.creative-hero) > .pop-nav button:focus-visible{background:#ffe12b!important;color:#0b0c15!important}
-body:has(.creative-hero) > main#app{margin:0 auto!important;padding-top:0!important}
-body:has(.creative-hero) .crumbs{display:none!important}
-body:has(.creative-hero) .creative-hero{margin-top:0!important;min-height:clamp(370px,48vw,650px)!important;padding-top:85px!important;background-position:center center; }
-@media(max-width:700px){
- body:has(.creative-hero) > .pop-nav{
-   top:calc(env(safe-area-inset-top,0px) + 8px)!important;left:8px!important;
-   transform:none!important;width:calc(100% - 16px)!important;max-width:none!important;
-   justify-content:flex-start!important;border-radius:13px;padding:6px!important;
- }
- body:has(.creative-hero) > .pop-nav button{
-   font-size:.75rem!important;min-height:41px;padding:8px 11px!important;flex:0 0 auto!important;
- }
- body:has(.creative-hero) .creative-hero{min-height:clamp(360px,100vw,540px)!important;padding-top:80px!important;background-image:url('assets/home-bg-mobile.png')!important}
-}
+/* ARTS ATTACK — independent transparent cutouts, no cropping from old mockup */
+.creative-hero{isolation:isolate;position:relative!important;min-height:clamp(390px,42vw,600px)!important;background:url('assets/home-bg-desktop.png') center/cover no-repeat!important;padding:80px 20px 25px!important;overflow:hidden!important}
+.creative-hero::before{display:none!important}.creative-hero::after{display:none!important}
+.creative-hero .hero-mark,.creative-hero h2,.creative-hero p,.creative-hero .mascot-hero{display:none!important}
+.creative-hero .attack-real-logo{position:absolute;z-index:2;left:clamp(10px,2vw,34px);top:50%;transform:translateY(-44%);width:clamp(200px,45%,640px);height:75%;object-fit:contain;object-position:left center;filter:drop-shadow(2px 4px 2px #0a091355);pointer-events:none}
+.creative-hero .attack-real-character{position:absolute;z-index:3;right:1%;bottom:-2%;height:92%;max-width:53%;width:auto;object-fit:contain;object-position:right bottom;filter:drop-shadow(2px 5px 3px #0a091355);pointer-events:none}
+.creative-hero>button{position:absolute!important;left:clamp(12px,4%,48px);bottom:14px;z-index:4;max-width:285px;margin:0!important}
+@media(max-width:700px){.creative-hero{min-height:510px!important;background-image:url('assets/home-bg-mobile.png')!important;padding-top:85px!important}.creative-hero .attack-real-logo{top:94px;left:6px;transform:none;height:210px;width:78%;object-position:left top}.creative-hero .attack-real-character{height:65%;width:auto;max-width:94%;right:0;bottom:0;object-position:right bottom}.creative-hero>button{left:10px;bottom:12px;max-width:215px;font-size:.75rem!important}}
+@media(max-width:400px){.creative-hero{min-height:460px!important}.creative-hero .attack-real-logo{height:180px;top:83px}.creative-hero .attack-real-character{height:62%}}
 
 
-/* V10 — composition logo + personnage dans le cadre d'accueil */
-body:has(.creative-hero) .creative-hero{
-  min-height:clamp(400px,48vw,650px)!important;
-  position:relative;display:flex!important;align-items:center!important;
-  justify-content:flex-start!important;padding:85px 20px 25px!important;
-  overflow:hidden;background-image:url('assets/home-bg-desktop.png')!important;background-size:cover!important;
-}
-body:has(.creative-hero) .creative-hero:before{content:none!important}
-body:has(.creative-hero) .creative-hero:after{display:none!important}
-body:has(.creative-hero) .creative-hero .hero-mark,
-body:has(.creative-hero) .creative-hero>h2,
-body:has(.creative-hero) .creative-hero>p,
-body:has(.creative-hero) .creative-hero>.mascot-hero{display:none!important}
-body:has(.creative-hero) .creative-hero .attack-logo-art{
-  position:relative;z-index:3;width:52%;height:100%;min-height:275px;
-  background:url('assets/hero-pop-academy.webp') left center / 190% auto no-repeat;
-  filter:drop-shadow(3px 6px 0 #0b0a17);
-  pointer-events:none;
-}
-body:has(.creative-hero) .creative-hero .attack-character-art{
-  position:absolute;z-index:2;right:0;bottom:0;top:76px;width:48%;
-  background:url('assets/hero-pop-academy.webp') right center / auto 110% no-repeat;
-  filter:drop-shadow(-5px 5px 0 #0b0a17);pointer-events:none;
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%);
-  mask-image:linear-gradient(90deg,transparent,#000 12%);
-}
-body:has(.creative-hero) .creative-hero>button{
- position:absolute!important;z-index:4;left:clamp(18px,3vw,44px);bottom:22px;
- margin:0!important;max-width:300px!important
-}
-@media(max-width:700px){
- body:has(.creative-hero) .creative-hero{
-  min-height:440px!important;background-image:url('assets/home-bg-mobile.png')!important;
-  padding:75px 7px 55px!important;align-items:flex-start!important
- }
- body:has(.creative-hero) .creative-hero .attack-logo-art{
-  width:88%;height:155px;min-height:0;margin-top:0;
-  background-size:195% auto;background-position:left center
- }
- body:has(.creative-hero) .creative-hero .attack-character-art{
-  top:145px;bottom:0;right:-3%;width:94%;
-  background-size:auto 115%;background-position:right center;
-  -webkit-mask-image:linear-gradient(180deg,transparent,#000 13%);mask-image:linear-gradient(180deg,transparent,#000 13%)
- }
- body:has(.creative-hero) .creative-hero>button{left:13px;bottom:13px}
-}
-
-
-/* HOTFIX: utiliser les images PNG chargées à la racine du dépôt */
-body:has(.creative-hero) .creative-hero{
- background:#00ccef url('assets/home-bg-desktop.png') center/cover no-repeat!important;
- position:relative!important;isolation:isolate;overflow:hidden;
-}
-body:has(.creative-hero) .creative-hero:before,
-body:has(.creative-hero) .creative-hero:after{display:none!important}
-body:has(.creative-hero) .creative-hero .attack-logo-art{
- background-image:url('ARTS-ATTACK-logo-transparent.png')!important;
- background-repeat:no-repeat!important;background-position:center!important;
- background-size:contain!important;
- width:51%!important;min-height:260px!important;max-height:440px!important;
- filter:drop-shadow(2px 5px 2px #08091450);z-index:3!important
-}
-body:has(.creative-hero) .creative-hero .attack-character-art{
- background-image:url('ARTS-ATTACK-personnage-transparent.png')!important;
- background-repeat:no-repeat!important;background-position:right bottom!important;
- background-size:contain!important;
- right:0!important;left:auto!important;top:90px!important;bottom:0!important;
- width:49%!important;filter:drop-shadow(2px 4px 2px #08091470)!important;
- mask-image:none!important;-webkit-mask-image:none!important;z-index:2!important
-}
-@media(max-width:700px){
- body:has(.creative-hero) .creative-hero{background-image:url('assets/home-bg-mobile.png')!important;min-height:470px!important}
- body:has(.creative-hero) .creative-hero .attack-logo-art{
-  width:95%!important;min-height:140px!important;height:190px!important;
-  background-position:left center!important
- }
- body:has(.creative-hero) .creative-hero .attack-character-art{
-  top:195px!important;right:-5%!important;width:90%!important;bottom:0!important;
-  background-position:right bottom!important;background-size:contain!important
- }
-}
-
-
-/* FIX V11 — vrais éléments image et preuve de publication */
-body:has(.creative-hero) .creative-hero{position:relative!important;overflow:hidden!important;min-height:530px!important;padding:0!important;background:url('assets/home-bg-desktop.png') center/cover no-repeat!important}
-body:has(.creative-hero) .creative-hero .attack-logo-image{display:block!important;position:absolute!important;z-index:6!important;top:105px!important;left:2%!important;width:53%!important;height:310px!important;object-fit:contain!important;object-position:center!important;filter:drop-shadow(3px 4px 3px #09091555)}
-body:has(.creative-hero) .creative-hero .attack-character-image{display:block!important;position:absolute!important;z-index:5!important;right:0!important;bottom:0!important;width:48%!important;height:420px!important;object-fit:contain!important;object-position:right bottom!important;filter:drop-shadow(2px 4px 3px #09091555)}
-body:has(.creative-hero) .creative-hero>button{z-index:8!important;left:25px!important;bottom:18px!important;position:absolute!important}
-body:has(.creative-hero) .creative-hero:after{content:'ACCUEIL V11'!important;display:block!important;position:absolute!important;z-index:9!important;left:12px!important;top:80px!important;right:auto!important;padding:4px 8px!important;color:#12121c!important;background:#ffe333!important;font-size:11px!important;letter-spacing:.05em!important;border:2px solid #12121c!important}
-@media(max-width:700px){
- body:has(.creative-hero) .creative-hero{min-height:540px!important;background-image:url('assets/home-bg-mobile.png')!important}
- body:has(.creative-hero) .creative-hero .attack-logo-image{top:92px!important;left:2%!important;width:96%!important;height:170px!important}
- body:has(.creative-hero) .creative-hero .attack-character-image{top:auto!important;bottom:34px!important;right:0!important;width:93%!important;height:295px!important}
- body:has(.creative-hero) .creative-hero:after{top:70px!important}
-}
+/* RESET ZERO — accueil avec fond seul desktop + iPhone */
+.creative-hero{background:url('assets/home-bg-desktop.png') center/cover no-repeat!important;min-height:420px!important;position:relative!important;overflow:hidden!important;padding:0!important;border:5px solid #12121d!important;border-radius:10px!important;box-shadow:8px 9px #12121d!important;isolation:isolate!important}
+.creative-hero::before,.creative-hero::after{display:none!important;content:none!important}
+.creative-hero .hero-mark,.creative-hero h2,.creative-hero p,.creative-hero .mascot-hero,.creative-hero .attack-real-logo,.creative-hero .attack-real-character{display:none!important}
+.creative-hero>button{position:absolute!important;left:22px!important;bottom:18px!important;z-index:4!important;margin:0!important;background:#171327!important;color:#fff!important;border:3px solid #fff!important;box-shadow:4px 5px #171327!important;max-width:320px!important}
+@media(max-width:700px){.creative-hero{background-image:url('assets/home-bg-mobile.png')!important;min-height:520px!important}.creative-hero>button{left:12px!important;bottom:12px!important;max-width:220px!important;font-size:.82rem!important;padding:10px 12px!important}}
 
 </style>
 </head>
@@ -1405,9 +1289,7 @@ body:has(.creative-hero) .creative-hero:after{content:'ACCUEIL V11'!important;di
     hero.appendChild(el('div','hero-mark','LE STUDIO CRÉATIF · 6e → 3e'));
     hero.appendChild(el('h2',null,'Bienvenue chez ARTS ATTACK!'));
     hero.appendChild(el('p',null,'EXPLORE. CRÉE. EXPOSE. · Douze missions de création, des expériences et des choix d’artiste à expliquer.')); 
-    var missionBtn=el('button',null,'JE RELÈVE UN DÉFI !');missionBtn.onclick=function(){renderStudio('6e')};hero.appendChild(missionBtn);hero.appendChild(el('div','mascot-hero',''));var logoArt=document.createElement('img');logoArt.className='attack-logo-image';logoArt.src='ARTS-ATTACK-logo-transparent.png?v=20261026-11';logoArt.alt='ARTS ATTACK!';hero.appendChild(logoArt);
-    var characterArt=document.createElement('img');characterArt.className='attack-character-image';characterArt.src='ARTS-ATTACK-personnage-transparent.png?v=20261026-11';characterArt.alt='Personnage artiste';hero.appendChild(characterArt);
-    app.appendChild(hero);
+    var missionBtn=el('button',null,'JE RELÈVE UN DÉFI !');missionBtn.onclick=function(){renderStudio('6e')};hero.appendChild(missionBtn);hero.appendChild(el('div','mascot-hero',''));app.appendChild(hero);
     app.appendChild(el('h2','section-title','Choisis ton niveau'));
 
     var grid = el('div','grid');
