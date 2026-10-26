@@ -5,7 +5,17 @@ const V5_IMAGES={wave:{provider:'met',id:45434},cypresses:{provider:'met',id:436
 const V5_COVERS=Object.create(null);
 const RARITY={wave:'commune',starry:'rare',boogie:'rare',yellow:'legendaire',self:'commune',cypresses:'rare',sunday:'legendaire',scream:'legendaire'};
 const V5_LEVEL={commune:'COMMUNE',rare:'RARE',legendaire:'LÉGENDAIRE'};
-async function loadVerifiedImages(){let count=0;for(const w of WORKS){try{const path='assets/oeuvres/'+w.id+'.jpg';const r=await fetch(path,{method:'HEAD'});if(r.ok && (r.headers.get('content-type')||'').startsWith('image/')){V5_COVERS[w.id]={src:path,source:'Reproduction locale · crédits : voir assets/oeuvres/manifest.json'};count++}}catch(e){}}const status=$('v5ImageStatus');if(status)status.textContent=`${count}/8 reproductions locales disponibles · les autres conservent une couverture graphique et un lien vers le musée`;paint();}
+function loadVerifiedImages(){
+  // No HEAD request: some hosts, caches and privacy tools reject it despite working image GETs.
+  // Let the browser load each local JPEG directly, with per-image fallback on error.
+  for(const w of WORKS){
+    V5_COVERS[w.id]={src:new URL('assets/oeuvres/'+w.id+'.jpg',document.baseURI).href,
+      source:'Reproduction locale fournie pour le musée · source et crédits : voir assets/oeuvres/manifest.json'};
+  }
+  const status=$('v5ImageStatus');
+  if(status)status.textContent='8 reproductions locales configurées · chargement direct depuis assets/oeuvres';
+  paint();
+}
 
 const $=id=>document.getElementById(id), STORE='arts-attack-museum-v4';
 const load=()=>{try{return JSON.parse(localStorage.getItem(STORE)||'{}')}catch{return {}}};

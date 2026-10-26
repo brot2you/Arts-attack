@@ -16,3 +16,5 @@ La V5.3 désactive le chargement externe des reproductions dans le site : seule 
 
 
 V5.4 : les 8 reproductions du musée sont désormais présentes en local dans assets/oeuvres/*.jpg.
+
+V5.4.1 : correction du chargement des 8 images locales (suppression du test HTTP HEAD).
