@@ -567,6 +567,35 @@ h2.section-title,.section-title{font-family:'Space Grotesk',sans-serif!important
 .timeline-card h3{font-family:'Space Grotesk',sans-serif;font-weight:900}.timeline-card:nth-of-type(odd){border-left:12px solid #ffe02a}.timeline-card:nth-of-type(even){border-left:12px solid #02c7ed}.q-card{border-left:10px solid #f92198}.btn{border:3px solid #0b111b;box-shadow:3px 4px #0b111b}.btn.ochre{background:#f82291}.btn.sage{background:#00b9df;color:#10121a}.badge{border:2px solid #121324}.back-link{background:#ffe023;color:#15151d;border:2px solid #121324;border-radius:5px;padding:9px 13px;box-shadow:3px 3px #121324}.site-footer{background:#0b111e;border-top:5px solid #ffe122}
 @media(max-width:800px){main{margin:10px 8px 24px;padding:14px 12px 32px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mission-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.level-card:before{height:240px}.xp-bar{display:none}}
 @media(max-width:500px){header h1.brand{font-size:1.65rem}.pop-nav{position:relative;gap:2px}.pop-nav button{font-size:.69rem;flex:1 1 30%;padding:7px 4px}.creative-hero{min-height:265px;background-position:48% center}.creative-hero button{margin:0 0 12px 12px;font-size:.8rem;padding:9px 12px}.grid{gap:9px}.level-card{min-height:280px;border-width:3px;box-shadow:3px 4px #101323}.level-card:before{height:182px}.level-card p{font-size:.67rem!important}.mission-grid{grid-template-columns:1fr}.section-title,h2.section-title{font-size:1.15rem!important}.mission-section{padding:12px}}
+
+/* ARTS ATTACK HOME V7 — illustrative Pop Art composition */
+body:has(.attack-dashboard){background:#07ccef;background-image:radial-gradient(#0c081a 2px,transparent 3px),linear-gradient(130deg,#fa149b 0 9%,transparent 9% 46%,#ffe121 46% 53%,transparent 53%);background-size:23px 23px,100% 100%}
+body:has(.attack-dashboard)>header{display:none}
+body:has(.attack-dashboard) main#app{max-width:1480px;width:100%;padding:12px 20px 34px;margin:0 auto}
+body:has(.attack-dashboard) .pop-nav{background:#080b13;border-bottom:5px solid #ffe621;display:flex;justify-content:center;flex-wrap:wrap;padding:10px 16px;gap:7px}
+body:has(.attack-dashboard) .pop-nav button{background:#fff;color:#080b13;border:2px solid #090914;box-shadow:2px 3px #f6ca22;padding:10px 17px;border-radius:8px;font-weight:900}
+body:has(.attack-dashboard) .pop-nav button[data-pop=home]{background:#f51094;color:#fff;box-shadow:3px 3px #ffe121}
+.attack-dashboard{position:relative;padding:15px;border:5px solid #090b15;box-shadow:8px 9px #090b15;border-radius:18px;background:#07c9eb;isolation:isolate;overflow:hidden}
+.attack-dashboard::before{content:"";pointer-events:none;position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 22% 15%,#fff 0 10%,transparent 21%),radial-gradient(circle at 16% 48%,#ffe000 0 10%,transparent 24%),radial-gradient(circle at 80% 20%,#fa1297 0 13%,transparent 31%),radial-gradient(circle at 90% 83%,#ffe019 0 7%,transparent 17%),radial-gradient(#070b1790 2px,transparent 3px);background-size:auto,auto,auto,auto,19px 19px}
+.attack-top{position:relative;height:min(38vw,440px);min-height:290px;display:flex;align-items:center;overflow:hidden;border-bottom:5px solid #0b0a17}
+.attack-top:before{content:"";position:absolute;inset:0 0 0 43%;background:url("assets/hero-pop-academy.webp") right center/auto 100% no-repeat;filter:saturate(1.14) contrast(1.05);z-index:0}
+.attack-top:after{content:"";position:absolute;inset:0 45% 0 0;background:linear-gradient(90deg,#0dcaf4 0%,#05c7eeda 70%,transparent);z-index:0;pointer-events:none}
+.attack-identity{width:58%;max-width:660px;z-index:1;position:relative;padding:5px}
+.attack-identity img{display:block;width:100%;height:auto;filter:drop-shadow(4px 7px #090811);transform:rotate(-3deg)}
+.attack-levels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;padding:17px 5px 7px}
+.attack-level{border:5px solid #0b0916;border-radius:12px;box-shadow:6px 7px #080b15;background:#fff;position:relative;overflow:hidden;padding:0;cursor:pointer;text-align:center;min-width:0;transition:transform .15s}
+.attack-level:hover{transform:translateY(-5px)}.attack-level:focus-visible{outline:5px solid #fff;outline-offset:4px}
+.attack-level .art{height:clamp(130px,19vw,260px);background:center/contain no-repeat;display:block}
+.attack-level:nth-child(1){background:#ffe226}.attack-level:nth-child(2){background:#ff86c3}.attack-level:nth-child(3){background:#43d8fb}.attack-level:nth-child(4){background:#b8ee88}
+.attack-level:nth-child(1) .art{background-image:url("assets/classe-1.webp")}.attack-level:nth-child(2) .art{background-image:url("assets/classe-2.webp")}.attack-level:nth-child(3) .art{background-image:url("assets/classe-3.webp")}.attack-level:nth-child(4) .art{background-image:url("assets/classe-4.webp")}
+.attack-level .subtitle{display:block;background:#fff;color:#0e0d19;font:900 clamp(.65rem,1.5vw,1.15rem)/1.15 'Space Grotesk',sans-serif;min-height:57px;padding:7px 4px;text-transform:uppercase;border-top:4px solid #0d0c18}
+.attack-level .percent{display:block;color:#13121c;font:800 .77rem 'Space Grotesk',sans-serif;padding:5px}
+.attack-quick{display:flex;flex-wrap:wrap;gap:9px;margin:18px 5px 0}
+.attack-quick button{border:3px solid #090a15;border-radius:9px;background:#fff;box-shadow:3px 4px #0a0b14;color:#111224;font:850 .86rem 'Space Grotesk',sans-serif;padding:11px;cursor:pointer}
+.attack-quick button:first-child{background:#ffed2e}
+@media(max-width:700px){body:has(.attack-dashboard) main#app{padding:8px}.attack-dashboard{padding:8px;border-width:3px;box-shadow:4px 4px #090b15}.attack-top{height:280px;min-height:0}.attack-top:before{inset:0 0 0 31%;background-size:auto 100%;background-position:85% center}.attack-top:after{inset:0 40% 0 0}.attack-identity{width:65%;align-self:flex-start;margin-top:20px}.attack-levels{gap:9px;grid-template-columns:repeat(2,minmax(0,1fr));padding:12px 1px 3px}.attack-level{border-width:3px;box-shadow:3px 3px #0b0b16}.attack-level .art{height:220px}.attack-level .subtitle{min-height:45px;font-size:.76rem}.attack-quick button{flex:1 1 40%}}
+@media(max-width:410px){.attack-top{height:215px}.attack-level .art{height:170px}.attack-identity{width:67%}.attack-quick button{font-size:.72rem}}
+
 </style>
 </head>
 <body>
@@ -1253,54 +1282,30 @@ h2.section-title,.section-title{font-family:'Space Grotesk',sans-serif!important
 
   function renderHome(){
     app.innerHTML = '';
-    var crumbs = el('div','crumbs');
-    var c1 = el('span','crumb active','Niveaux');
-    var c2 = el('span','crumb','Glossaire général');
-    c2.onclick = function(){ renderGlossary(); };
-    var c3 = el('span','crumb','🛠️ Outils élève');
-    c3.onclick = function(){ renderToolsHub(); };
-    var c4 = el('span','crumb','✏️ Techniques');
-    c4.onclick = function(){ renderTechniquesHub(); };
-    var c5 = el('span','crumb','🖼️ Histoire de l\'art');
-    c5.onclick = function(){ renderHistoireArtHub(); };
-    crumbs.appendChild(c1); crumbs.appendChild(c2); crumbs.appendChild(c3); crumbs.appendChild(c4); crumbs.appendChild(c5);
-    app.appendChild(crumbs);
-
-    var hero = el('section','creative-hero');
-    hero.appendChild(el('div','hero-mark','LE STUDIO CRÉATIF · 6e → 3e'));
-    hero.appendChild(el('h2',null,'Bienvenue chez ARTS ATTACK!'));
-    hero.appendChild(el('p',null,'EXPLORE. CRÉE. EXPOSE. · Douze missions de création, des expériences et des choix d’artiste à expliquer.')); 
-    var missionBtn=el('button',null,'JE RELÈVE UN DÉFI !');missionBtn.onclick=function(){renderStudio('6e')};hero.appendChild(missionBtn);hero.appendChild(el('div','mascot-hero',''));app.appendChild(hero);
-    app.appendChild(el('h2','section-title','Choisis ton niveau'));
-
-    var grid = el('div','grid');
-    for(var i=0;i<DATA.levels.length;i++){
-      (function(lvl){
-        var prog = levelProgress(lvl);
-        var card = el('div','level-card');
-        card.appendChild(el('div','tag', lvl.cycle));
-        card.appendChild(el('h3', null, lvl.name));card.appendChild(el('div','art-card-name', ({'6e':'OBSERVER LE MONDE','5e':'TRANSFORMER LES IMAGES','4e':'ESPACE ET TEMPS','3e':'ART ET SOCIÉTÉ'})[lvl.id]));
-        card.appendChild(el('p', null, escapeHtml(lvl.tagline)));
-        var pw = el('div','level-progress');
-        var inner = el('div', null, '');
-        inner.style.width = (prog.total ? (prog.done/prog.total*100) : 0) + '%';
-        pw.appendChild(inner);
-        card.appendChild(pw);
-        card.appendChild(el('p', null, '<small>' + prog.done + ' / ' + prog.total + ' questionnements terminés</small>'));
-        card.setAttribute('role','button');card.setAttribute('tabindex','0');card.setAttribute('aria-label',lvl.name+' : '+lvl.tagline);card.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();renderLevel(lvl.id)}};card.onclick = function(){ renderLevel(lvl.id); };
-        grid.appendChild(card);
-      })(DATA.levels[i]);
-    }
-    app.appendChild(grid);
-    app.appendChild(el('div','pop-mini','<img src="assets/icon-palette.svg" alt=""> Observer · expérimenter · créer · expliquer'));
-
-    if(state.badges.length){
-      var br = el('div','badge-row');
-      for(var b=0;b<state.badges.length;b++){
-        br.appendChild(el('span','badge', escapeHtml(state.badges[b])));
-      }
-      app.appendChild(br);
-    }
+    var shell=el('section','attack-dashboard');
+    shell.setAttribute('aria-label','Accueil Arts Attack');
+    var top=el('div','attack-top');
+    var identity=el('div','attack-identity');
+    var logo=document.createElement('img');logo.src='assets/arts-attack-logo.svg';logo.alt='ARTS ATTACK! — Explore. Crée. Expose.';identity.appendChild(logo);top.appendChild(identity);shell.appendChild(top);
+    var levels=el('div','attack-levels');
+    var names={'6e':'Observer le monde','5e':'Transformer les images','4e':'Espace et temps','3e':'Art et société'};
+    DATA.levels.forEach(function(lvl){
+      var progress=levelProgress(lvl);
+      var card=el('button','attack-level');card.type='button';
+      card.setAttribute('aria-label',lvl.name+' — '+names[lvl.id]);
+      card.appendChild(el('span','art',''));
+      card.appendChild(el('span','subtitle',names[lvl.id]));
+      card.appendChild(el('span','percent',progress.done+' / '+progress.total+' questionnements'));
+      card.onclick=function(){renderLevel(lvl.id)};
+      levels.appendChild(card);
+    });
+    shell.appendChild(levels);
+    var nav=el('div','attack-quick');
+    [['✦ Missions',function(){renderStudio('6e')}],['▣ Galerie',renderHistoireArtHub],['✎ Techniques',renderTechniquesHub],['▤ Mon carnet',renderToolsHub]].forEach(function(item){
+      var b=el('button',null,item[0]);b.type='button';b.onclick=item[1];nav.appendChild(b);
+    });
+    shell.appendChild(nav);app.appendChild(shell);
+    if(state.badges.length){var br=el('div','badge-row');state.badges.forEach(function(b){br.appendChild(el('span','badge',escapeHtml(b)))});app.appendChild(br);}
   }
 
   function renderLevel(levelId){
