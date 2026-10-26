@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 480" role="img" aria-label="ARTS ATTACK!">
+<defs><filter id="edge"><feMorphology in="SourceAlpha" operator="dilate" radius="6" result="e"/><feFlood flood-color="#08070d"/><feComposite in2="e" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter><pattern id="dot" width="17" height="17" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="3" fill="#080712"/></pattern></defs>
+<g transform="rotate(-5 355 215)" filter="url(#edge)">
+<path d="M50 105 Q300 4 659 91 L704 261 88 410Z" fill="#fff"/>
+<path d="M70 82 l88 -41 60 30 72 -28 94 45 140 -23 102 50 -28 145 -523 32Z" fill="#11c9ee"/>
+<path d="M67 90l205 -22 62 68 -247 14z" fill="#fc1497"/>
+<path d="M295 74h281l40 91-266 29z" fill="#ffe226"/>
+<text x="79" y="202" font-family="Impact,Arial Black,sans-serif" font-weight="1000" font-style="italic" letter-spacing="-7" font-size="156" paint-order="stroke" stroke="#08070d" stroke-width="17" fill="#fff">ARTS</text>
+<text x="63" y="356" font-family="Impact,Arial Black,sans-serif" font-weight="1000" font-style="italic" letter-spacing="-8" font-size="136" paint-order="stroke" stroke="#08070d" stroke-width="19" fill="#ffe126">ATTACK<tspan fill="#fa1697">!</tspan></text>
+</g>
+<path d="M70 376 L604 368 651 412 95 427Z" fill="#050611"/><text x="114" y="409" fill="#fff" font-size="27" font-weight="bold" font-family="Arial,sans-serif">Explore. Crée. Expose.</text>
+<path d="M154 30l20 -27 18 21 29 -8 -8 44 -56 0z" fill="#ffe100" stroke="#08070d" stroke-width="7"/>
+<circle cx="644" cy="52" r="20" fill="#ff168f" stroke="#08070d" stroke-width="7"/><path d="M630 54q14 18 30 -1" fill="none" stroke="#090713" stroke-width="5"/>
+<path d="M23 232l20 8m-16 24l20-7m621 42l25 -16m-2 47l30 7" stroke="#090713" stroke-width="9" stroke-linecap="round"/>
+</svg>
