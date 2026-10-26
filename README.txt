@@ -1,5 +1,5 @@
-ARTS ATTACK! V4 — MUSÉE DES ŒUVRES
+ARTS ATTACK! V5 — COLLECTION PREMIUM
 
-Décompresser le ZIP et déposer son CONTENU à la racine GitHub Pages (index.html, style.css, app.js, v3.js, v4.js, assets/).
-La V4 conserve les fonctions V1 à V3. Les vignettes du musée sont des abstractions graphiques : les reproductions authentiques sont accessibles via les notices des musées.
-La progression est locale au navigateur.
+ZIP complet pour GitHub Pages. Décompresser et déposer TOUT le contenu à la racine du dépôt.
+Nouveautés : galerie pop art premium, filtres de collection, cadres Commune/Rare/Légendaire, et reproductions authentiques via API officielles uniquement quand les données confirment le domaine public. Sans connexion ou autorisation API, couvertures graphiques + liens musées conservés.
+Aucune œuvre sous droits non vérifiés n’est intégrée au ZIP. Sauvegardes et missions V4 conservées.
