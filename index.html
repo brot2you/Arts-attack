@@ -605,6 +605,54 @@ body:has(.creative-hero) .creative-hero{margin-top:0!important;min-height:clamp(
  body:has(.creative-hero) .creative-hero{min-height:clamp(360px,100vw,540px)!important;padding-top:80px!important;background-image:url('assets/home-bg-mobile.png')!important}
 }
 
+
+/* V10 — composition logo + personnage dans le cadre d'accueil */
+body:has(.creative-hero) .creative-hero{
+  min-height:clamp(400px,48vw,650px)!important;
+  position:relative;display:flex!important;align-items:center!important;
+  justify-content:flex-start!important;padding:85px 20px 25px!important;
+  overflow:hidden;background-image:url('assets/home-bg-desktop.png')!important;background-size:cover!important;
+}
+body:has(.creative-hero) .creative-hero:before{content:none!important}
+body:has(.creative-hero) .creative-hero:after{display:none!important}
+body:has(.creative-hero) .creative-hero .hero-mark,
+body:has(.creative-hero) .creative-hero>h2,
+body:has(.creative-hero) .creative-hero>p,
+body:has(.creative-hero) .creative-hero>.mascot-hero{display:none!important}
+body:has(.creative-hero) .creative-hero .attack-logo-art{
+  position:relative;z-index:3;width:52%;height:100%;min-height:275px;
+  background:url('assets/hero-pop-academy.webp') left center / 190% auto no-repeat;
+  filter:drop-shadow(3px 6px 0 #0b0a17);
+  pointer-events:none;
+}
+body:has(.creative-hero) .creative-hero .attack-character-art{
+  position:absolute;z-index:2;right:0;bottom:0;top:76px;width:48%;
+  background:url('assets/hero-pop-academy.webp') right center / auto 110% no-repeat;
+  filter:drop-shadow(-5px 5px 0 #0b0a17);pointer-events:none;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%);
+  mask-image:linear-gradient(90deg,transparent,#000 12%);
+}
+body:has(.creative-hero) .creative-hero>button{
+ position:absolute!important;z-index:4;left:clamp(18px,3vw,44px);bottom:22px;
+ margin:0!important;max-width:300px!important
+}
+@media(max-width:700px){
+ body:has(.creative-hero) .creative-hero{
+  min-height:440px!important;background-image:url('assets/home-bg-mobile.png')!important;
+  padding:75px 7px 55px!important;align-items:flex-start!important
+ }
+ body:has(.creative-hero) .creative-hero .attack-logo-art{
+  width:88%;height:155px;min-height:0;margin-top:0;
+  background-size:195% auto;background-position:left center
+ }
+ body:has(.creative-hero) .creative-hero .attack-character-art{
+  top:145px;bottom:0;right:-3%;width:94%;
+  background-size:auto 115%;background-position:right center;
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 13%);mask-image:linear-gradient(180deg,transparent,#000 13%)
+ }
+ body:has(.creative-hero) .creative-hero>button{left:13px;bottom:13px}
+}
+
 </style>
 </head>
 <body>
@@ -1308,7 +1356,7 @@ body:has(.creative-hero) .creative-hero{margin-top:0!important;min-height:clamp(
     hero.appendChild(el('div','hero-mark','LE STUDIO CRÉATIF · 6e → 3e'));
     hero.appendChild(el('h2',null,'Bienvenue chez ARTS ATTACK!'));
     hero.appendChild(el('p',null,'EXPLORE. CRÉE. EXPOSE. · Douze missions de création, des expériences et des choix d’artiste à expliquer.')); 
-    var missionBtn=el('button',null,'JE RELÈVE UN DÉFI !');missionBtn.onclick=function(){renderStudio('6e')};hero.appendChild(missionBtn);hero.appendChild(el('div','mascot-hero',''));app.appendChild(hero);
+    var missionBtn=el('button',null,'JE RELÈVE UN DÉFI !');missionBtn.onclick=function(){renderStudio('6e')};hero.appendChild(missionBtn);hero.appendChild(el('div','mascot-hero',''));hero.appendChild(el('div','attack-logo-art',''));hero.appendChild(el('div','attack-character-art',''));app.appendChild(hero);
     app.appendChild(el('h2','section-title','Choisis ton niveau'));
 
     var grid = el('div','grid');
