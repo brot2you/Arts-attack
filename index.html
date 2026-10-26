@@ -653,6 +653,41 @@ body:has(.creative-hero) .creative-hero>button{
  body:has(.creative-hero) .creative-hero>button{left:13px;bottom:13px}
 }
 
+
+/* HOTFIX: utiliser les images PNG chargées à la racine du dépôt */
+body:has(.creative-hero) .creative-hero{
+ background:#00ccef url('assets/home-bg-desktop.png') center/cover no-repeat!important;
+ position:relative!important;isolation:isolate;overflow:hidden;
+}
+body:has(.creative-hero) .creative-hero:before,
+body:has(.creative-hero) .creative-hero:after{display:none!important}
+body:has(.creative-hero) .creative-hero .attack-logo-art{
+ background-image:url('ARTS-ATTACK-logo-transparent.png')!important;
+ background-repeat:no-repeat!important;background-position:center!important;
+ background-size:contain!important;
+ width:51%!important;min-height:260px!important;max-height:440px!important;
+ filter:drop-shadow(2px 5px 2px #08091450);z-index:3!important
+}
+body:has(.creative-hero) .creative-hero .attack-character-art{
+ background-image:url('ARTS-ATTACK-personnage-transparent.png')!important;
+ background-repeat:no-repeat!important;background-position:right bottom!important;
+ background-size:contain!important;
+ right:0!important;left:auto!important;top:90px!important;bottom:0!important;
+ width:49%!important;filter:drop-shadow(2px 4px 2px #08091470)!important;
+ mask-image:none!important;-webkit-mask-image:none!important;z-index:2!important
+}
+@media(max-width:700px){
+ body:has(.creative-hero) .creative-hero{background-image:url('assets/home-bg-mobile.png')!important;min-height:470px!important}
+ body:has(.creative-hero) .creative-hero .attack-logo-art{
+  width:95%!important;min-height:140px!important;height:190px!important;
+  background-position:left center!important
+ }
+ body:has(.creative-hero) .creative-hero .attack-character-art{
+  top:195px!important;right:-5%!important;width:90%!important;bottom:0!important;
+  background-position:right bottom!important;background-size:contain!important
+ }
+}
+
 </style>
 </head>
 <body>
