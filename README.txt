@@ -1,9 +1,18 @@
-ARTS ATTACK V5.2 — assets/oeuvres
+ARTS ATTACK — V5.3 / Import des reproductions authentiques
 
-Le dossier assets/oeuvres contient le manifeste des 8 œuvres. IMPORTANT : les fichiers JPEG ne sont pas encore présents car les serveurs de fichiers images sont inaccessibles dans cet environnement.
+IMPORTANT : les huit images JPG ne sont PAS livrées dans ce ZIP. Le téléchargement réseau a échoué dans cet environnement. Le site garde ses illustrations de secours. Ne pas annoncer que le musée fonctionne entièrement hors ligne tant que les huit JPG ne sont pas présents.
 
-Pour télécharger automatiquement les 3 reproductions à partir des API publiques officiellement vérifiées : sur ordinateur avec Python 3 et accès Internet, lancer : python telecharger_oeuvres.py (ou python3 telecharger_oeuvres.py). Le script vérifie le statut domaine public avant écriture. Les 5 autres œuvres nécessitent une vérification individuelle de la reproduction et de ses droits, elles conservent la couverture pop art.
+Pour compléter assets/oeuvres depuis un ordinateur connecté à Internet :
+  1. Décompresser ce ZIP.
+  2. Installer Python 3 et Pillow : python -m pip install Pillow
+  3. Dans le dossier décompressé : python telecharger_oeuvres.py
+  4. Contrôler les résultats dans assets/oeuvres/ (wave.jpg, starry.jpg, boogie.jpg, yellow.jpg, self.jpg, cypresses.jpg, sunday.jpg, scream.jpg).
+  5. Si une source ne fournit pas de fichier confirmé, consulter la liste des fichiers possibles affichée par le script et vérifier les droits avant de copier manuellement un JPEG dans assets/oeuvres avec le nom attendu.
+  6. Mettre en ligne LE CONTENU du dossier complet sur GitHub Pages.
 
-Le site utilise en priorité assets/oeuvres/<id>.jpg lorsque disponible, sinon ses reproductions en ligne autorisées ou des couvertures graphiques.
+Sources prioritaires : The Met (CC0 Open Access), Art Institute of Chicago (œuvres du domaine public) et fichiers Commons marqués domaine public/CC0. Chaque œuvre garde son lien musée, sa notice, ses missions et sa place dans la collection.
 
-Publier tous les fichiers et assets à la racine du dépôt GitHub Pages. Conserve les fonctionnalités V1-V5.1.
+La V5.3 désactive le chargement externe des reproductions dans le site : seule une image locale véritablement présente est affichée. Les fichiers absents sont représentés par les couvertures de secours, avec lien vers le musée.
+
+
+V5.4 : les 8 reproductions du musée sont désormais présentes en local dans assets/oeuvres/*.jpg.

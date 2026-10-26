@@ -5,12 +5,7 @@ const V5_IMAGES={wave:{provider:'met',id:45434},cypresses:{provider:'met',id:436
 const V5_COVERS=Object.create(null);
 const RARITY={wave:'commune',starry:'rare',boogie:'rare',yellow:'legendaire',self:'commune',cypresses:'rare',sunday:'legendaire',scream:'legendaire'};
 const V5_LEVEL={commune:'COMMUNE',rare:'RARE',legendaire:'LÉGENDAIRE'};
-async function loadVerifiedImages(){let count=0;for(const w of WORKS){try{const path='assets/oeuvres/'+w.id+'.jpg';const r=await fetch(path,{method:'HEAD'});if(r.ok && (r.headers.get('content-type')||'').startsWith('image/')){V5_COVERS[w.id]={src:path,source:'Reproduction locale · crédits : voir assets/oeuvres/manifest.json'};count++}}catch(e){}}for(const [id,cfg] of Object.entries(V5_IMAGES)) {if(V5_COVERS[id])continue;try {const endpoint=cfg.provider==='met'?`https://collectionapi.metmuseum.org/public/collection/v1/objects/${cfg.id}`:`https://api.artic.edu/api/v1/artworks/${cfg.id}?fields=id,image_id,is_public_domain`;
-const response=await fetch(endpoint,{mode:'cors'});if(!response.ok)continue;const raw=await response.json();const d=cfg.provider==='met'?raw:raw.data;
-if(cfg.provider==='met' && d.isPublicDomain && (d.primaryImageSmall||d.primaryImage) && ((id==='wave' && /hokusai/i.test(d.artistDisplayName||'')) || (id==='cypresses' && /gogh/i.test(d.artistDisplayName||'')))) {V5_COVERS[id]={src:d.primaryImageSmall||d.primaryImage,source:'The Met · Open Access (CC0)'};count++}
-if(cfg.provider==='artic' && d.is_public_domain && d.image_id){V5_COVERS[id]={src:`https://www.artic.edu/iiif/2/${encodeURIComponent(d.image_id)}/full/843,/0/default.jpg`,source:'Art Institute of Chicago · domaine public'};count++}
-} catch(error) {/* Offline fallback is an original graphic cover, never an unverified reproduction. */}}
-const status=$('v5ImageStatus');if(status)status.textContent=count?`${count} reproductions disponibles (locales ou catalogues ouverts) · autres cartes en couverture pop art`:'Mode sans images externes : couvertures pop art et liens vers les musées';paint();}
+async function loadVerifiedImages(){let count=0;for(const w of WORKS){try{const path='assets/oeuvres/'+w.id+'.jpg';const r=await fetch(path,{method:'HEAD'});if(r.ok && (r.headers.get('content-type')||'').startsWith('image/')){V5_COVERS[w.id]={src:path,source:'Reproduction locale · crédits : voir assets/oeuvres/manifest.json'};count++}}catch(e){}}const status=$('v5ImageStatus');if(status)status.textContent=`${count}/8 reproductions locales disponibles · les autres conservent une couverture graphique et un lien vers le musée`;paint();}
 
 const $=id=>document.getElementById(id), STORE='arts-attack-museum-v4';
 const load=()=>{try{return JSON.parse(localStorage.getItem(STORE)||'{}')}catch{return {}}};
