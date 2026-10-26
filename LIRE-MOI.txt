@@ -1,0 +1,1 @@
+Déposer index.html, app.js, icones-notions.css et le dossier assets/notions à la racine du dépôt. Ne pas supprimer les autres fichiers.

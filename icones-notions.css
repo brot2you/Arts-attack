@@ -1,0 +1,9 @@
+
+/* V8 - neuf notions plastiques : illustrations individuelles, texte HTML accessible */
+.concept-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:15px}
+.concept{padding:0;overflow:hidden;display:flex;flex-direction:column;min-width:0;text-align:center;transition:transform .15s,box-shadow .15s;background:#fff}
+.concept img{display:block;width:100%;height:clamp(135px,17vw,225px);object-fit:cover;object-position:center center}
+.concept .concept-name{display:block;font-size:16px;font-weight:950;margin:0;padding:10px 5px 12px;background:#fff;color:#126fc4;line-height:1.2}
+.concept:hover{transform:translateY(-3px)}
+.concept.selected .concept-name{background:#ffe23c;color:#11182b}
+@media(max-width:680px){.concept-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.concept img{height:145px}.concept .concept-name{font-size:13px;padding:9px 2px}}
