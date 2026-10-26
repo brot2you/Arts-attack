@@ -1,0 +1,1 @@
+V5.4.2 : huit reproductions JPEG locales, chargement direct sans requête HEAD, fichier .nojekyll. Déposer le CONTENU du ZIP à la racine de la branche main. Si une URL image reste 404 après déploiement, vérifier le contenu réellement déployé ; ce correctif ne peut pas réparer une configuration externe.
