@@ -59,6 +59,19 @@ function open(w) {
   const tools = el('div', 'row'); if (w.img) tools.append(btn('⤢ Agrandir', zoomIt, 'mini ghost'));
   const a = el('a', 'museum-link', w.img ? 'Notice du musée ↗' : '🖼️ Voir l\'œuvre sur le site du musée ↗'); a.href = w.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; tools.append(a); wrap.append(tools);
 
+  const credits = {
+    muybridge: ['Image : Eadweard Muybridge, Library of Congress / Wikimedia Commons · domaine public', 'https://commons.wikimedia.org/wiki/File:The_Horse_in_Motion.jpg', null],
+    morisot: ['Image : Berthe Morisot, Wikimedia Commons · domaine public', 'https://commons.wikimedia.org/wiki/File:Berthe_Morisot_-_Le_berceau.jpg', null],
+    batllo: ['Photo : ChristianSchd / Wikimedia Commons · CC BY-SA 3.0 · image redimensionnée', 'https://commons.wikimedia.org/wiki/File:Casa_Batllo_Overview_Barcelona_Spain_cut.jpg', 'https://creativecommons.org/licenses/by-sa/3.0/'],
+    claudel: ['Photo : Jean-Pierre Dalbéra / Wikimedia Commons · CC BY 2.0 · image redimensionnée', 'https://commons.wikimedia.org/wiki/File:La_Valse_de_Camille_Claudel_(Mus%C3%A9e_Rodin,_Paris)_(51246445543).jpg', 'https://creativecommons.org/licenses/by/2.0/']
+  };
+  if (credits[w.id]) {
+    const [label, url, license] = credits[w.id];
+    const credit = el('p', 'museum-meta'); const link = el('a', '', label); link.href = url; link.target = '_blank'; link.rel = 'noopener noreferrer'; credit.append(link);
+    if (license) { const lic = el('a', '', ' · Licence'); lic.href = license; lic.target = '_blank'; lic.rel = 'noopener noreferrer'; credit.append(lic); }
+    wrap.append(credit);
+  }
+
   /* Trois défis, débloqués l'un après l'autre */
   const obs = el('section', 'obs'); obs.append(el('h3', '', '🔍 Défis d\'observation'));
   const tabs = el('div', 'defi-tabs'); tabs.setAttribute('role', 'group'); tabs.setAttribute('aria-label', 'Choisir un défi');

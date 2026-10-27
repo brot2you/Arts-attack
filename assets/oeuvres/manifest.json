@@ -60,28 +60,30 @@
   "muybridge": {
     "title": "The Horse in Motion",
     "museum": "Library of Congress",
-    "status": "À AJOUTER — domaine public, téléchargeable sur la page de la Library of Congress",
-    "source": "https://www.loc.gov/item/97502309/",
+    "status": "Image intégrée ; source et crédit affichés dans la fiche de l’œuvre.",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Horse_in_Motion.jpg",
     "file": "muybridge.jpg"
   },
   "morisot": {
     "title": "Le Berceau",
     "museum": "Musée d'Orsay",
-    "status": "À AJOUTER — œuvre du domaine public ; reproduction disponible sur Wikimedia Commons (fichier « Berthe Morisot 008.jpg »)",
-    "source": "https://www.musee-orsay.fr/fr/oeuvres/1132",
+    "status": "Image intégrée ; source et crédit affichés dans la fiche de l’œuvre.",
+    "source": "https://commons.wikimedia.org/wiki/File:Berthe_Morisot_-_Le_berceau.jpg",
     "file": "morisot.jpg"
   },
   "batllo": {
     "title": "Casa Batlló (façade)",
     "museum": "Barcelone",
-    "status": "À AJOUTER — photo de la façade sous licence libre (Wikimedia Commons, catégorie Casa Batlló) ; noter l'auteur de la photo et la licence",
-    "file": "batllo.jpg"
+    "status": "Image intégrée ; source et crédit affichés dans la fiche de l’œuvre.",
+    "file": "batllo.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Casa_Batllo_Overview_Barcelona_Spain_cut.jpg"
   },
   "claudel": {
     "title": "La Valse",
     "museum": "Musée Rodin / musée Camille Claudel",
-    "status": "À AJOUTER — sculpture du domaine public mais la photo appartient à son auteur : prendre une photo sous licence libre (Wikimedia Commons) et la créditer",
-    "file": "claudel.jpg"
+    "status": "Image intégrée ; source et crédit affichés dans la fiche de l’œuvre.",
+    "file": "claudel.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:La_Valse_de_Camille_Claudel_(Mus%C3%A9e_Rodin,_Paris)_(51246445543).jpg"
   },
   "pollock": {
     "title": "One: Number 31, 1950",
