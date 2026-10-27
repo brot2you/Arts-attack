@@ -51,11 +51,12 @@
     "file": "scream.jpg"
   },
   "fang": {
-    "title": "Gardien de reliquaire (Nlo Byeri)",
+    "title": "Gardien de reliquaire (Eyema Bieri)",
     "museum": "Brooklyn Museum",
-    "status": "À AJOUTER — image sous licence CC BY sur la page du musée (créditer : Brooklyn Museum)",
-    "source": "https://brooklynmuseum.org/opencollection/objects/169093",
-    "file": "fang.jpg"
+    "status": "Image intégrée : Brooklyn Museum, CC BY 3.0, conversion JPEG.",
+    "source": "https://www.brooklynmuseum.org/fr-FR/objects/71255",
+    "file": "fang.jpg",
+    "photo_source": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_56.6.100_Reliquary_Guardian_Figure_Eyema_Bieri_(2).jpg"
   },
   "muybridge": {
     "title": "The Horse in Motion",
