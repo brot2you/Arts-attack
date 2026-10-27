@@ -1,0 +1,217 @@
+/* Arts Attack! V6 — composants de la refonte (s'ajoute à style.css) */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:-999px;top:8px;z-index:99;background:var(--yellow);color:var(--ink);padding:10px 14px;border:3px solid var(--ink);font-weight:900}
+.skip:focus{left:8px}
+.modal-open{overflow:hidden}
+button:disabled{cursor:not-allowed;opacity:.55}
+select:focus-visible,input:focus-visible,a:focus-visible,canvas:focus-visible,.mini:focus-visible{outline:4px solid #0ac5f5;outline-offset:3px}
+
+/* En-tête : compteur cliquable */
+.profile{background:transparent;border:2px solid #ffffff40;border-radius:12px;padding:8px 12px;color:#fff}
+.profile:hover{background:#ffffff18}
+
+/* Boutons secondaires */
+.mini.ghost{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+.mini.ghost:hover{background:var(--yellow)}
+.linkish{background:none;border:0;padding:6px 2px;color:#1742a6;font-weight:800;text-decoration:underline;text-underline-offset:3px;cursor:pointer;font:inherit;font-size:14px}
+.danger{color:#a3123f!important}
+.studio-actions button.danger{border-color:#a3123f}
+.status{font-weight:800;color:#0b6a4f;min-height:1.2em}
+.empty{color:#5c6270}
+.big{font-size:1.08rem;font-weight:650}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+
+/* Filtres communs */
+.filters{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:26px 0 22px}
+.filters label{font-weight:900}
+.filters select{border:2px solid #16192b;border-radius:10px;padding:10px 14px;background:#fff;font:inherit;font-weight:800;color:#16192b;max-width:100%}
+.count{font-weight:800;color:#3a3f55;margin-left:auto}
+
+/* Missions */
+.v3-card.done{outline:4px solid #0b8a5f;outline-offset:-4px}
+.v3-status{font-weight:900;color:#0b6a4f}
+.stepper{display:flex;gap:6px;list-style:none;padding:0;margin:18px 0;counter-reset:s}
+.stepper li{flex:1;counter-increment:s;background:#fff;border:2px solid #17192c;border-radius:9px;padding:8px 6px;font-weight:850;font-size:14px;text-align:center;color:#5a6075}
+.stepper li::before{content:counter(s) ". "}
+.stepper li.past{background:#c9f3e1;color:#17192c}
+.stepper li.now{background:#ffe23b;color:#17192c;box-shadow:3px 3px 0 #17192c}
+.v3-fig{margin:0 0 14px;background:#141527;border-radius:12px;overflow:hidden;border:3px solid #17192c}
+.v3-fig img{display:block;width:100%;max-height:360px;object-fit:contain}
+.v3-fig figcaption{background:#fff;padding:10px 12px;font-size:14px}
+.attach{margin:14px 0}
+.attach-label{font-weight:850;margin:6px 0}
+.attach-row{display:flex;flex-wrap:wrap;gap:8px}
+.attach-preview{display:block;max-width:100%;max-height:240px;border:3px solid var(--ink);border-radius:10px;margin:8px 0}
+.filebtn{position:relative;overflow:hidden;cursor:pointer;display:inline-flex;align-items:center}
+.filebtn input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.express{margin-top:44px}
+.express h2{font-size:clamp(22px,3vw,30px);margin:0 0 14px}
+.express h2 small{font-size:15px;font-weight:700;color:#4a5066;margin-left:8px}
+.express-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.express-card{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:16px;box-shadow:4px 4px 0 var(--ink);display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.express-card h3{margin:4px 0 6px;font-size:20px}
+.express-card .mini{margin-top:auto}
+.return-mission[hidden]{display:none}
+.return-mission{position:sticky;top:8px;z-index:5;display:block;margin:0 0 16px;background:#ffe23b;border:3px solid var(--ink);border-radius:12px;padding:10px 14px;font-weight:900;box-shadow:4px 4px 0 var(--ink)}
+
+/* Atelier : onglets */
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0}
+.tab{border:3px solid var(--ink);border-bottom:0;border-radius:14px 14px 0 0;background:#fff;padding:12px 18px;font-weight:950;font-size:16px;color:var(--ink)}
+.tab.selected{background:var(--yellow)}
+.tabs + .studio{margin-top:0;border-top-left-radius:0}
+#panelDessin{margin-top:0;border-top-left-radius:0}
+.sub{font-size:clamp(24px,3vw,34px);margin:40px 0 4px}
+.sub-p{margin:0}
+.studio-controls fieldset{border:2px dashed #12172a;border-radius:12px;padding:10px 12px 12px;margin:16px 0 0;background:#fff}
+.studio-controls fieldset:disabled{opacity:.6}
+.studio-controls legend{font-weight:900;padding:0 6px}
+.studio-controls fieldset label{margin:10px 0 4px}
+.studio-work textarea{margin-bottom:0}
+.studio-caption{min-height:1.3em}
+.concept-detail .mini{margin-top:12px;display:inline-block}
+
+/* Atelier : dessin en calques */
+.lab-layout{display:grid;grid-template-columns:minmax(200px,260px) minmax(0,1fr);gap:20px}
+.lab-panel{background:#dbf5ff;border:2px solid #12172a;border-radius:15px;padding:15px;display:flex;flex-direction:column;gap:7px;align-self:start}
+.lab-panel label{font-weight:850;font-size:14px;margin-top:6px}
+.lab-panel select,.lab-panel input[type=range]{width:100%}
+.lab-panel select{padding:9px;border:2px solid #26324e;border-radius:9px;background:#fff;color:#17213a;font:inherit}
+.lab-panel input[type=color]{width:100%;height:42px;cursor:pointer}
+.lab-buttons{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.lab-buttons button{background:#fff;border:2px solid #18223d;border-radius:10px;padding:9px 11px;font-weight:800;min-height:40px;color:#18223d}
+.lab-buttons button[aria-pressed=true]{background:#ffdc44}
+.lab-explain{background:#fff;padding:12px;border-radius:10px;line-height:1.45;font-size:14px;margin:6px 0 0}
+.lab-main{min-width:0}
+.lab-stack{position:relative;width:100%;aspect-ratio:960/620;border:3px solid #101629;border-radius:13px;overflow:hidden;background:#fff}
+.lab-stack canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+#labCanvas{touch-action:none;cursor:crosshair}
+#labGuides{pointer-events:none}
+.swatches{display:flex;flex-wrap:wrap;gap:6px;min-height:4px}
+.swatch{width:28px;height:28px;border-radius:50%;border:2px solid var(--ink);padding:0}
+.lab-mission{background:#fff;border:2px dashed #ed4685;border-radius:14px;padding:15px;margin-top:6px}
+.lab-mission h3{margin:0 0 6px}
+.lab-mission label{display:block;font-weight:850;margin:10px 0 6px}
+.lab-mission textarea{display:block;width:100%;font:inherit;border:2px solid #12172a;border-radius:10px;padding:10px;resize:vertical}
+
+/* Amorces de phrase */
+.starters{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}
+.chip{background:#fff;border:2px solid #12172a;border-radius:999px;padding:6px 12px;font-weight:750;font-size:13px;color:#12172a;line-height:1.2}
+.chip:hover{background:#ffe23c}
+.chip.lexchip{background:#e2f7fc}
+
+/* Toast */
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:50;background:var(--ink);color:#fff;padding:12px 16px;border-radius:14px;border:3px solid var(--yellow);box-shadow:5px 5px 0 #000;display:flex;align-items:center;gap:14px;font-weight:800;max-width:min(560px,92vw)}
+.toast[hidden]{display:none}
+.toast button{background:var(--yellow);color:var(--ink);border:0;border-radius:9px;padding:7px 12px;font-weight:900}
+
+/* Lexique */
+.dialog.lex{width:min(680px,100%)}
+.lex h2{margin:6px 0 14px}
+#lexSearch{width:100%;padding:12px;border:2px solid var(--ink);border-radius:10px;font:inherit;margin-bottom:8px}
+#lexList h3{margin:18px 0 6px;font-size:15px;background:var(--yellow);display:inline-block;padding:3px 10px;border:2px solid var(--ink);border-radius:8px}
+#lexList dl{margin:0}
+#lexList dt{margin-top:10px}
+#lexList dd{margin:2px 0 0;line-height:1.45}
+.lexterm{background:none;border:0;padding:0;font:inherit;font-weight:900;font-size:16px;color:var(--ink);cursor:default}
+.insertable .lexterm{cursor:pointer;color:#1742a6;text-decoration:underline;text-underline-offset:3px}
+
+/* Techniques */
+.tech-card.done{outline:3px solid #0b8a5f;outline-offset:-3px}
+.tech-marks{font-size:13px;font-weight:800;color:#3a3f55;white-space:pre}
+.tech-answers button.right,.museum-answers .right{background:#c9f3e1!important;border-color:#0b6a4f!important;opacity:1}
+.museum-answers .wrong{text-decoration:line-through}
+.tech-step label{display:block;font-weight:850;margin-top:10px}
+.tech-step .mini{margin-top:10px}
+
+/* Musée */
+.museum-card.locked .premium-reproduction{filter:saturate(.35) brightness(.85)}
+.museum-card.locked:hover .premium-reproduction{filter:none}
+.museum-cover.noimg{background:linear-gradient(135deg,#ffde06,#fe1677,#03cce7)}
+.museum-feedback.good{color:#087a58!important}
+.museum-feedback.retry{color:#7a4a00!important}
+.obs,.analyse{background:#fff8e6;border:2px solid var(--ink);border-radius:14px;padding:14px 16px;margin:16px 0}
+.obs h3,.analyse h3{margin:0 0 8px}
+.analyse label{display:block;font-weight:900;margin:12px 0 4px}
+.analyse textarea{display:block;width:100%;font:inherit;border:2px solid #12172a;border-radius:10px;padding:10px;resize:vertical}
+.analyse .mini{margin-top:12px}
+.v5-detail-image{cursor:zoom-in}
+.v51-duel-visual span{font-size:13px}
+
+/* Carnet */
+.carnet-tools{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:22px 0 10px}
+.carnet-tools label:first-child{font-weight:900}
+.carnet-tools select{border:2px solid #16192b;border-radius:10px;padding:10px 12px;background:#fff;font:inherit;font-weight:800}
+.backup-hint{background:#fff1cf;border:2px solid #7a4a00;border-radius:10px;padding:10px 14px;font-weight:750;max-width:860px}
+.journal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;margin-top:12px}
+.page{background:#fff;border:3px solid var(--ink);border-radius:16px;overflow:hidden;box-shadow:5px 5px 0 var(--ink);display:flex;flex-direction:column;break-inside:avoid}
+.page img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:#141527;border-bottom:3px solid var(--ink)}
+.page-body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.page-type{font-size:12px;font-weight:900;color:#7a245f}
+.page h3{margin:0;font-size:18px;line-height:1.2}
+.page-detail{margin:0;font-size:14px;color:#3a3f55}
+.page blockquote{margin:4px 0;padding:8px 10px;border-left:4px solid var(--pink);background:#fff6fb;white-space:pre-line;line-height:1.45}
+.page small{color:#5c6270}
+.page-tools{display:flex;gap:12px;margin-top:auto}
+.empty-state{grid-column:1/-1;background:#fff;border:3px dashed var(--ink);border-radius:16px;padding:22px;max-width:640px}
+.print-head{display:none}
+
+/* Mobile */
+@media(max-width:790px){
+  .lab-layout{grid-template-columns:1fr}
+  .lab-panel{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px}
+  .lab-panel>*{grid-column:1/-1}
+  .express-grid{grid-template-columns:1fr}
+  .count{margin-left:0;width:100%}
+  .stepper li{font-size:12px;padding:6px 2px}
+  .tab{font-size:14px;padding:10px 12px}
+}
+@media(max-width:680px){
+  .profile{font-size:12px;padding:6px 8px}
+}
+
+/* Impression du carnet (PDF) */
+@media print{
+  @page{margin:14mm}
+  body{background:#fff}
+  .top,footer,.inner-head p,.no-print,.view:not(#carnet),.toast{display:none!important}
+  #carnet{display:block!important;padding:0;background:#fff;min-height:0}
+  .inner h1{font-size:28px;text-shadow:none;-webkit-text-stroke:0;margin:0 0 4px}
+  .print-head{display:block;font-size:12px;color:#444;margin-bottom:10px}
+  .journal-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .page{box-shadow:none;border:1.5px solid #333}
+  .page img{aspect-ratio:auto;max-height:70mm;object-fit:contain;background:#fff}
+}
+@media(prefers-reduced-motion:reduce){.toast{transition:none}}
+.museum-duo label{min-width:0}
+.museum-duo select{width:100%;min-width:0}
+.concept-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:15px}
+.concept{padding:0;overflow:hidden;display:flex;flex-direction:column;min-width:0;text-align:center;transition:transform .15s,box-shadow .15s;background:#fff}
+.concept img{display:block;width:100%;height:clamp(135px,17vw,225px);object-fit:cover;object-position:center center}
+.concept .concept-name{display:block;font-size:16px;font-weight:950;margin:0;padding:10px 5px 12px;background:#fff;color:#126fc4;line-height:1.2}
+.concept:hover{transform:translateY(-3px)}
+.concept.selected .concept-name{background:#ffe23c;color:#11182b}
+@media(max-width:680px){.concept-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.concept img{height:145px}.concept .concept-name{font-size:13px;padding:9px 2px}}
+@media(max-width:790px){
+  .studio-work,.lab-main{order:-1}
+  .studio-body,.lab-layout{display:flex;flex-direction:column}
+  .selpanel:disabled>:not(legend){display:none}
+  .tabs{flex-wrap:nowrap;gap:6px}
+  .tab{flex:1;font-size:13px;padding:9px 8px;line-height:1.2}
+}
+@media(max-width:790px){
+  .studio-body>.studio-work{display:contents}
+  .studio-body>.studio-work>canvas{order:-3}
+  .studio-body>.studio-work>.studio-caption{order:-2}
+  .studio-body>.studio-controls{order:-1}
+}
+/* Musée : 3 défis par œuvre */
+.museum-card.locked .museum-cover.protected,.museum-cover.noimg{background:repeating-linear-gradient(135deg,#ffe23c 0 18px,#ffd000 18px 36px)}
+.museum-cover.protected{background:repeating-linear-gradient(135deg,#c7f0fc 0 18px,#a9e4f6 18px 36px)!important}
+.cover-note{position:absolute;inset:auto 10px 42px 10px;z-index:1;background:#fff;border:2px solid var(--ink);border-radius:10px;padding:8px 10px;font-weight:850;font-size:13px;text-align:center;color:var(--ink)}
+.protected-box{background:#e2f7fc;border:2px solid var(--ink);border-radius:12px;padding:14px 16px;font-weight:700}
+.defi-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 12px}
+.defi-tab{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:8px 14px;font-weight:900;color:var(--ink)}
+.defi-tab.on{background:var(--yellow);box-shadow:3px 3px 0 var(--ink)}
+.defi-panel .mini{margin-top:10px}
+.museum-card .museum-rarity{white-space:pre}
+.rarity-commune .v5-rarity-label{background:#fff}

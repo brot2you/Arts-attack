@@ -49,5 +49,53 @@
     "museum": "National Museum Norway",
     "status": "Image locale intégrée depuis le fichier utilisateur",
     "file": "scream.jpg"
+  },
+  "fang": {
+    "title": "Gardien de reliquaire (Nlo Byeri)",
+    "museum": "Brooklyn Museum",
+    "status": "À AJOUTER — image sous licence CC BY sur la page du musée (créditer : Brooklyn Museum)",
+    "source": "https://brooklynmuseum.org/opencollection/objects/169093",
+    "file": "fang.jpg"
+  },
+  "muybridge": {
+    "title": "The Horse in Motion",
+    "museum": "Library of Congress",
+    "status": "À AJOUTER — domaine public, téléchargeable sur la page de la Library of Congress",
+    "source": "https://www.loc.gov/item/97502309/",
+    "file": "muybridge.jpg"
+  },
+  "morisot": {
+    "title": "Le Berceau",
+    "museum": "Musée d'Orsay",
+    "status": "À AJOUTER — œuvre du domaine public ; reproduction disponible sur Wikimedia Commons (fichier « Berthe Morisot 008.jpg »)",
+    "source": "https://www.musee-orsay.fr/fr/oeuvres/1132",
+    "file": "morisot.jpg"
+  },
+  "batllo": {
+    "title": "Casa Batlló (façade)",
+    "museum": "Barcelone",
+    "status": "À AJOUTER — photo de la façade sous licence libre (Wikimedia Commons, catégorie Casa Batlló) ; noter l'auteur de la photo et la licence",
+    "file": "batllo.jpg"
+  },
+  "claudel": {
+    "title": "La Valse",
+    "museum": "Musée Rodin / musée Camille Claudel",
+    "status": "À AJOUTER — sculpture du domaine public mais la photo appartient à son auteur : prendre une photo sous licence libre (Wikimedia Commons) et la créditer",
+    "file": "claudel.jpg"
+  },
+  "pollock": {
+    "title": "One: Number 31, 1950",
+    "museum": "MoMA",
+    "status": "PAS D'IMAGE — œuvre protégée jusqu'au 31 décembre 2026 (Pollock est mort en 1956) ; lien vers le musée uniquement"
+  },
+  "christo": {
+    "title": "Le Pont-Neuf empaqueté",
+    "museum": "Paris / Centre Pompidou",
+    "status": "PAS D'IMAGE — œuvre protégée ; lien vers le musée uniquement"
+  },
+  "kusama": {
+    "title": "Infinity Mirrored Room – Filled with the Brilliance of Life",
+    "museum": "Tate Modern",
+    "status": "PAS D'IMAGE — artiste vivante, œuvre protégée ; lien vers le musée uniquement"
   }
 }

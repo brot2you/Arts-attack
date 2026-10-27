@@ -1,9 +1,307 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#11162a"><meta name="description" content="Arts Attack! Pop Art Academy — explore, expérimente et crée en arts plastiques au collège."><title>Arts Attack! — Pop Art Academy</title><link rel="preload" href="assets/academy.webp" as="image"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="laboratoire.css?v=7.0"><link rel="stylesheet" href="icones-notions.css?v=8"></head><body>
-<div class="app"><header class="top"><button class="brand" data-view="home" aria-label="Retour à l'accueil"><img src="assets/logo.webp" alt="Arts Attack!"></button><nav aria-label="Navigation principale"><button class="nav active" data-view="home">🏠 Accueil</button><button class="nav" data-view="missions">🚀 Missions</button><button class="nav" data-view="atelier">🎨 Atelier</button><button class="nav" data-view="techniques">🧰 Techniques</button><button class="nav" data-view="galerie">🏛️ Musée V5</button><button class="nav" data-view="carnet">📒 Carnet</button></nav><div class="profile" aria-label="Points gagnés">⭐ <b id="points">0</b> pts</div></header>
-<main><section id="home" class="view current"><div class="hero" role="img" aria-label="Grand hall lumineux de l'académie des arts, décoré de fresques, sculptures et couleurs vives"><div class="hero-veil"></div><img class="mascot" src="assets/hero.webp" alt="Jeune artiste de Pop Art Academy accueillant les élèves"><div class="hero-copy"><span class="eyebrow">Bienvenue à la Pop Art Academy !</span><h1>EXPLORE. <span>CRÉE.</span><br>OSE !</h1><p>Trois univers, des défis créatifs, des œuvres à découvrir. À toi de jouer avec les arts plastiques !</p><button class="cta" data-view="missions">Commencer l'aventure <span>➜</span></button></div></div><div class="content"><div class="section-head"><h2>Choisis ton univers</h2><span>Inspiré des programmes d'arts plastiques du collège</span></div><div class="cards"><button class="world w1" data-world="representer"><img src="assets/representer.webp" alt="Photographie, dessin et composition"><span class="worldcopy"><b>01 — REPRÉSENTER</b><small>Dessiner, photographier, raconter, composer</small><span class="go">Explorer ↗</span></span></button><button class="world w2" data-world="transformer"><img src="assets/transformer.webp" alt="Atelier de sculpture et transformation de matières"><span class="worldcopy"><b>02 — FORMER ET TRANSFORMER</b><small>Assembler, sculpter, détourner, expérimenter</small><span class="go">Explorer ↗</span></span></button><button class="world w3" data-world="exposer"><img src="assets/exposer.webp" alt="Galerie d'art avec visiteurs et installations"><span class="worldcopy"><b>03 — EXPOSER, RECEVOIR ET RELIER</b><small>Présenter, observer, partager, rencontrer</small><span class="go">Explorer ↗</span></span></button></div><div class="bottom"><div class="note"><h3>⚡ Défi du jour</h3><p>Comment transformer trois formes simples en une image qui raconte une histoire ?</p><button class="mini" data-mission="formes">Essayer le défi →</button></div><div class="note light"><h3>🧩 Les 9 notions plastiques</h3><p>Couleur · Espace · Forme · Geste · Lumière · Matière · Outil · Support · Temps</p><button class="mini" data-view="atelier">Les découvrir →</button></div></div></div></section>
-<section id="missions" class="view inner"><div class="inner-head"><span class="eyebrow">À toi de créer</span><h1>MISSIONS <em>CRÉATIVES</em></h1><p>Observe, choisis, expérimente. Les défis servent à explorer des démarches artistiques, pas à juger ton talent.</p></div><div class="mission-grid"><article class="mission"><span class="pill">Représenter · 6e à 3e</span><h2>Une histoire en trois formes</h2><p>Crée une composition qui évoque une émotion en choisissant des formes et une intention.</p><button class="mini" data-mission="formes">Lancer la mission →</button></article><article class="mission"><span class="pill">Former et transformer</span><h2>Un objet, une autre vie</h2><p>Imagine comment détourner un objet quotidien pour en faire une œuvre. Justifie ton choix.</p><button class="mini" data-mission="objet">Lancer la mission →</button></article><article class="mission"><span class="pill">Exposer et relier</span><h2>À toi de faire le commissaire</h2><p>Choisis le lieu où présenter une œuvre et réfléchis à l'expérience du spectateur.</p><button class="mini" data-mission="expo">Lancer la mission →</button></article></div><section class="v3" aria-labelledby="v3-heading"><div class="v3-intro"><span class="eyebrow">Nouveau · V3 · Parcours artistique</span><h2 id="v3-heading">12 MISSIONS, 4 NIVEAUX, TON STYLE !</h2><p>Explore une œuvre authentique, expérimente, produis une création personnelle et explique tes choix. Aucun modèle à recopier : ton intention compte.</p></div><div class="v3-filter"><label for="gradeChoice">Je choisis mon niveau</label><select id="gradeChoice"><option value="6e">6e</option><option value="5e">5e</option><option value="4e">4e</option><option value="3e">3e</option></select><span id="v3Count" aria-live="polite"></span></div><div class="v3-grid" id="v3Grid"></div><div id="v3Player" class="v3-player" hidden aria-live="polite"></div></section></section>
-<section id="atelier" class="view inner"><div class="inner-head"><span class="eyebrow">Ton laboratoire d'idées</span><h1>LES <em>9 NOTIONS</em></h1><p>Sélectionne une notion pour découvrir un geste de création.</p></div><section class="studio" aria-labelledby="studio-title"><div class="studio-top"><div><span class="eyebrow">Nouveau · Studio V2</span><h2 id="studio-title">MANIPULE, TESTE, CRÉE !</h2><p>Déplace les formes sur la toile. Change leurs couleurs, leur taille et leur superposition pour exprimer une intention artistique.</p></div><div class="studio-score" id="studioStatus" aria-live="polite">Prêt à créer</div></div><div class="studio-tabs" role="group" aria-label="Choisir un atelier"><button class="studio-tab selected" data-studio="composition">🔺 Composition</button><button class="studio-tab" data-studio="couleur">🎨 Couleur</button><button class="studio-tab" data-studio="transformation">🧩 Transformation</button></div><div class="studio-body"><div class="studio-controls"><h3 id="studioModeTitle">Composition expressive</h3><p id="studioInstruction">Dispose trois formes pour raconter une rencontre. Que change leur position ?</p><label for="studioBackground">Fond de la toile</label><select id="studioBackground"><option value="#fdf9ed">Papier clair</option><option value="#16243b">Nuit bleue</option><option value="#f6cce9">Rose doux</option><option value="#f6d73b">Jaune vif</option></select><label for="studioColor">Couleur du prochain élément</label><input type="color" id="studioColor" value="#f72585"><label for="studioSize">Taille du prochain élément</label><input type="range" id="studioSize" min="25" max="115" value="65"><div class="studio-actions"><button type="button" id="addCircle">● Cercle</button><button type="button" id="addSquare">■ Carré</button><button type="button" id="addTriangle">▲ Triangle</button><button type="button" id="addLine">╱ Trait</button></div><div class="studio-actions"><button type="button" id="shuffleArt">↻ Explorer une variante</button><button type="button" id="undoArt">↶ Annuler</button><button type="button" id="clearArt">Tout effacer</button></div><div class="studio-tip" id="studioTip">Astuce : une forme plus grande attire souvent davantage le regard.</div></div><div class="studio-work"><canvas id="artCanvas" width="800" height="520" aria-label="Toile de création interactive. Utilise la souris ou le doigt pour déplacer les formes.">La toile nécessite un navigateur prenant en charge Canvas.</canvas><p class="studio-caption">Déplace les éléments avec le doigt ou la souris. Les essais font partie de la création.</p><div class="studio-bottom"><button type="button" class="mini" id="downloadArt">⬇ Enregistrer mon image PNG</button><button type="button" class="mini" id="saveArt">✦ Ajouter au carnet</button></div><label for="artIntention">Mon intention artistique (facultatif)</label><textarea id="artIntention" rows="2" maxlength="350" placeholder="Je veux montrer une impression de mouvement en…"></textarea></div></div></section><div class="concept-grid" id="concepts"></div><div class="concept-detail" id="concept-detail" aria-live="polite">Choisis une notion ci-dessus.</div></section>
-<section id="techniques" class="view inner"><div class="inner-head"><span class="eyebrow">Arts Attack! · Académie des techniques</span><h1>APPRENDS <em>EN CRÉANT</em></h1><p>Découvre les gestes, les matériaux et les démarches des arts plastiques. Choisis une technique, relève un défi, puis explique tes choix.</p></div><div class="tech-intro"><strong>Au programme :</strong> expérimenter, produire et créer · mettre en œuvre un projet · s’exprimer et analyser sa pratique · se repérer dans les domaines liés aux arts plastiques.</div><div class="tech-filter"><label for="techLevel">Mon niveau</label><select id="techLevel"><option value="all">Tous les niveaux</option><option value="6e">6e · Cycle 3</option><option value="5e">5e · Cycle 4</option><option value="4e">4e · Cycle 4</option><option value="3e">3e · Cycle 4</option></select><label for="techDomain">Questionnement</label><select id="techDomain"><option value="all">Tous</option><option value="representation">Représentation / images</option><option value="matiere">Matérialité / objet</option><option value="espace">Œuvre / espace / spectateur</option></select></div><div class="tech-grid" id="techGrid"></div><div class="tech-player" id="techPlayer" hidden aria-live="polite"></div><section id="creativeLab" aria-label="Laboratoire de création interactive"></section><div class="tech-note"><h3>📒 Mon carnet des techniques</h3><p id="techProgress">Aucune technique validée pour le moment.</p><button type="button" class="mini" id="techReview">Revoir mes techniques</button><div id="techReviewList"></div></div></section><section id="galerie" class="view inner"><div class="inner-head"><span class="eyebrow">V5.1 · Musée premium</span><h1>LE <em>MUSÉE DES ŒUVRES</em></h1><p>Observe, compare, enquête et collectionne. Les reproductions authentiques sont consultables depuis les liens vers les musées.</p></div>
-<div class="museum-wrap"><div class="museum-summary"><div><strong id="museumCollected">0 / 8</strong><span>cartes dans ma collection</span></div><div><strong id="museumSolved">0 / 8</strong><span>défis d'observation réussis</span></div><button class="mini" id="museumRandom" type="button">🎲 Une œuvre surprise</button></div><div class="museum-filters"><label for="museumFilter">Notion</label><select id="museumFilter"><option value="all">Toutes les notions</option><option value="Couleur">Couleur</option><option value="Espace">Espace</option><option value="Geste">Geste</option><option value="Forme">Forme</option><option value="Lumière">Lumière</option><option value="Matière">Matière</option><option value="Temps">Temps</option></select><label for="museumGrade">Niveau conseillé</label><select id="museumGrade"><option value="all">Tous</option><option value="6e">6e</option><option value="5e">5e</option><option value="4e">4e</option><option value="3e">3e</option></select></div><div class="v5-showcase"><div><span class="v5-kicker">POP ART ACADEMY · COLLECTION</span><h2>TA GALERIE, TON UNIVERS !</h2><p>Chaque défi réussi enrichit ton musée. Les niveaux de cartes correspondent à des étapes du parcours, pas à la valeur des œuvres.</p></div><div class="v5-trophies"><span>● COMMUNE</span><span>◆ RARE</span><span>★ LÉGENDAIRE</span></div></div><div class="v5-collection-controls"><label for="v5Rarity">Collection <select id="v5Rarity"><option value="all">Toutes les cartes</option><option value="collected">Ma collection</option><option value="uncollected">À découvrir</option></select></label><span id="v5ImageStatus" role="status" aria-live="polite">Reproductions libres : vérification des catalogues</span></div><div class="museum-grid" id="museumGrid"></div><div id="museumDetail" class="museum-detail" hidden></div><section class="museum-compare"><span class="eyebrow">Laboratoire du regard</span><h2>⚡ DUEL D'ŒUVRES</h2><p>Choisis deux œuvres pour chercher ce qu'elles ont en commun et ce qui les distingue.</p><div class="museum-duo"><label>Œuvre A<select id="museumA"></select></label><label>Œuvre B<select id="museumB"></select></label></div><button class="mini" id="compareWorks" type="button">Comparer les œuvres →</button><div id="museumComparison" aria-live="polite"></div></section></div></section>
-<section id="carnet" class="view inner"><div class="inner-head"><span class="eyebrow">Garde la trace de tes essais</span><h1>MON <em>CARNET D'ARTISTE</em></h1><p>Retrouve les missions explorées et tes intentions artistiques enregistrées sur cet appareil.</p></div><div id="journal" class="journal"></div><button class="reset" id="reset">Effacer ma progression locale</button></section></main><footer>Arts Attack! — Prototype V5.1 · Arts plastiques au collège · Un indicateur de participation, pas une évaluation scolaire.</footer></div>
-<div id="artZoom" class="v51-zoom" hidden role="dialog" aria-modal="true" aria-label="Agrandissement de l’œuvre"><button type="button" aria-label="Fermer l’agrandissement">✕ Fermer</button><img alt=""></div><div class="dialog-backdrop" id="dialog" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle"><button class="close" id="closeDialog" aria-label="Fermer">×</button><span class="eyebrow">Mission interactive</span><h2 id="dialogTitle"></h2><p id="dialogPrompt"></p><div id="choices" class="choices"></div><label for="reflection">Explique ton intention artistique en quelques mots (facultatif) :</label><textarea id="reflection" rows="3" placeholder="Je veux montrer…"></textarea><div id="feedback" aria-live="polite"></div><button class="cta" id="saveMission">Enregistrer mon idée ✓</button></section></div><script src="app.js" defer></script><script src="v3.js" defer></script><script src="v4.js?v=5.4.3" defer></script><script src="techniques.js?v=6.0" defer></script><script src="laboratoire.js?v=7.0" defer></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#11162a">
+<meta name="description" content="Arts Attack! Pop Art Academy — explore, expérimente et crée en arts plastiques au collège.">
+<title>Arts Attack! — Pop Art Academy</title>
+<link rel="preload" href="assets/academy.webp" as="image">
+<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="refonte.css?v=6">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<div class="app">
+<header class="top">
+  <button class="brand" data-view="home" aria-label="Retour à l'accueil"><img src="assets/logo.webp" alt="Arts Attack!"></button>
+  <nav aria-label="Navigation principale">
+    <button class="nav active" data-view="home">🏠 Accueil</button>
+    <button class="nav" data-view="missions">🚀 Missions</button>
+    <button class="nav" data-view="atelier">🎨 Atelier</button>
+    <button class="nav" data-view="techniques">🧰 Techniques</button>
+    <button class="nav" data-view="galerie">🏛️ Musée</button>
+    <button class="nav" data-view="carnet">📒 Carnet</button>
+  </nav>
+  <button class="profile" data-view="carnet" id="counter" aria-label="Mon carnet">📒 <b id="pageCount">0</b> <span id="pageLabel">page</span> · 🃏 <b id="cardCount">0</b></button>
+</header>
+
+<main id="main">
+<!-- ACCUEIL -->
+<section id="home" class="view current">
+  <div class="hero">
+    <span class="sr-only">Grand hall lumineux de l'académie des arts, décoré de fresques, sculptures et couleurs vives.</span>
+    <div class="hero-veil"></div>
+    <img class="mascot" src="assets/hero.webp" alt="Jeune artiste de la Pop Art Academy">
+    <div class="hero-copy">
+      <span class="eyebrow">Bienvenue à la Pop Art Academy !</span>
+      <h1>EXPLORE. <span>CRÉE.</span><br>OSE !</h1>
+      <p>Des missions, un atelier pour essayer, des œuvres à observer et un carnet pour garder la trace de tes idées.</p>
+      <button class="cta" data-view="missions">Commencer l'aventure <span>➜</span></button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="section-head"><h2>Choisis ton univers</h2><span>Les trois grands questionnements du programme</span></div>
+    <div class="cards">
+      <button class="world w1" data-world="Représenter"><img src="assets/representer.webp" alt=""><span class="worldcopy"><b>Représenter</b><small>Dessiner, photographier, raconter, composer</small><span class="go">Voir les missions</span></span></button>
+      <button class="world w2" data-world="Former et transformer"><img src="assets/transformer.webp" alt=""><span class="worldcopy"><b>Former et transformer</b><small>Assembler, sculpter, détourner, expérimenter</small><span class="go">Voir les missions</span></span></button>
+      <button class="world w3" data-world="Exposer, recevoir et relier"><img src="assets/exposer.webp" alt=""><span class="worldcopy"><b>Exposer, recevoir et relier</b><small>Présenter, observer, partager, rencontrer</small><span class="go">Voir les missions</span></span></button>
+    </div>
+    <div class="bottom">
+      <div class="note"><h3>⚡ Défi du jour</h3><p id="dailyText"></p><button class="mini" id="dailyGo" type="button">Relever le défi</button></div>
+      <div class="note light"><h3>📖 Les mots de l'artiste</h3><p>Cadrage, contraste, matière, point de vue… Les mots justes pour expliquer tes choix.</p><button class="mini" type="button" data-lexique>Ouvrir le lexique</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSIONS -->
+<section id="missions" class="view inner">
+  <div class="inner-head">
+    <h1>MISSIONS <em>CRÉATIVES</em></h1>
+    <p>Chaque mission suit quatre étapes : observer une œuvre, expérimenter, produire, expliquer. Aucun modèle à recopier : ton intention compte.</p>
+  </div>
+  <div class="filters" role="group" aria-label="Filtrer les missions">
+    <label for="gradeChoice">Mon niveau</label>
+    <select id="gradeChoice" data-grade-select><option value="6e">6e</option><option value="5e">5e</option><option value="4e">4e</option><option value="3e">3e</option></select>
+    <label for="axisChoice">Univers</label>
+    <select id="axisChoice"><option value="all">Les trois univers</option><option>Représenter</option><option>Former et transformer</option><option>Exposer, recevoir et relier</option></select>
+    <span id="v3Count" class="count" aria-live="polite"></span>
+  </div>
+  <div class="v3-grid" id="v3Grid"></div>
+  <div id="v3Player" class="v3-player" hidden></div>
+
+  <section class="express" aria-labelledby="express-title">
+    <h2 id="express-title">Défis express <small>5 minutes, pour se lancer</small></h2>
+    <div class="express-grid" id="expressGrid"></div>
+  </section>
+</section>
+
+<!-- ATELIER -->
+<section id="atelier" class="view inner">
+  <div class="inner-head">
+    <h1>L'<em>ATELIER</em></h1>
+    <p>Essaie, rate, recommence : les essais font partie de la création. Les outils numériques aident à comprendre les notions, ils ne remplacent pas les vrais matériaux.</p>
+  </div>
+  <div class="tabs" role="tablist" aria-label="Choisir un outil">
+    <button role="tab" class="tab selected" aria-selected="true" aria-controls="panelFormes" id="tabFormes" data-tab="formes">🔺 Composer avec des formes</button>
+    <button role="tab" class="tab" aria-selected="false" aria-controls="panelDessin" id="tabDessin" data-tab="dessin" tabindex="-1">🖌️ Dessiner et peindre</button>
+  </div>
+
+  <!-- Formes -->
+  <section class="studio" id="panelFormes" role="tabpanel" aria-labelledby="tabFormes">
+    <div class="studio-tabs" role="group" aria-label="Choisir un exercice">
+      <button class="studio-tab selected" data-studio="composition" type="button">Composition</button>
+      <button class="studio-tab" data-studio="couleur" type="button">Couleur</button>
+      <button class="studio-tab" data-studio="transformation" type="button">Transformation</button>
+    </div>
+    <div class="studio-body">
+      <div class="studio-controls">
+        <h3 id="studioModeTitle"></h3>
+        <p id="studioInstruction"></p>
+        <div class="studio-actions" aria-label="Ajouter une forme">
+          <button type="button" data-add="circle">● Cercle</button>
+          <button type="button" data-add="square">■ Carré</button>
+          <button type="button" data-add="triangle">▲ Triangle</button>
+          <button type="button" data-add="line">╱ Trait</button>
+          <button type="button" data-add="arc">◠ Arc</button>
+        </div>
+        <label for="studioBackground">Fond de la toile</label>
+        <select id="studioBackground"><option value="#fdf9ed">Papier clair</option><option value="#16243b">Nuit bleue</option><option value="#f6cce9">Rose doux</option><option value="#f6d73b">Jaune vif</option><option value="#ffffff">Blanc</option><option value="#111111">Noir</option></select>
+
+        <fieldset class="selpanel" id="selPanel" disabled>
+          <legend id="selLegend">Touche une forme pour la modifier</legend>
+          <label for="selColor">Couleur</label><input type="color" id="selColor" value="#f72585">
+          <label for="selSize">Taille</label><input type="range" id="selSize" min="20" max="260" value="80">
+          <label for="selAngle">Rotation</label><input type="range" id="selAngle" min="-180" max="180" value="0">
+          <label for="selAlpha">Transparence</label><input type="range" id="selAlpha" min="15" max="100" value="100">
+          <div class="studio-actions">
+            <button type="button" id="selUp">⬆ Devant</button>
+            <button type="button" id="selDown">⬇ Derrière</button>
+            <button type="button" id="selDup">⧉ Dupliquer</button>
+            <button type="button" id="selDel" class="danger">✕ Supprimer</button>
+          </div>
+        </fieldset>
+        <div class="studio-actions">
+          <button type="button" id="shuffleArt">↻ Variante au hasard</button>
+          <button type="button" id="undoArt">↶ Annuler</button>
+          <button type="button" id="clearArt">Tout effacer</button>
+        </div>
+        <div class="studio-tip" id="studioTip"></div>
+      </div>
+      <div class="studio-work">
+        <canvas id="artCanvas" width="800" height="520" tabindex="0" aria-label="Toile de composition. Touche une forme pour la sélectionner et la déplacer. Au clavier : Espace pour passer d'une forme à l'autre, flèches pour déplacer, Suppr pour effacer."></canvas>
+        <p class="studio-caption" id="studioStatus" aria-live="polite"></p>
+        <label for="artIntention">Mon intention artistique</label>
+        <textarea id="artIntention" rows="2" maxlength="400" placeholder="Je veux montrer… J'ai placé…" data-starters></textarea>
+        <div class="studio-bottom">
+          <button type="button" class="mini" id="saveArt">✦ Ajouter au carnet</button>
+          <button type="button" class="mini ghost" id="downloadArt">⬇ Télécharger l'image</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dessin -->
+  <section class="studio" id="panelDessin" role="tabpanel" aria-labelledby="tabDessin" hidden>
+    <div class="lab-layout">
+      <aside class="lab-panel">
+        <label for="labTool">Mon outil</label>
+        <select id="labTool">
+          <option value="brush">🖌 Pinceau</option><option value="pencil">✏️ Crayon</option><option value="spray">💨 Aérographe</option>
+          <option value="dots">⚫ Pointillisme</option><option value="hatch">▤ Hachures</option><option value="grain">🪨 Matière granuleuse</option>
+          <option value="wash">💧 Lavis transparent</option><option value="eraser">◻ Gomme</option>
+          <option value="line">📏 Ligne</option><option value="rectangle">▭ Rectangle</option><option value="ellipse">◯ Ellipse</option>
+        </select>
+        <label for="labColor">Couleur</label><input id="labColor" type="color" value="#ef3977">
+        <div class="swatches" id="labSwatches" aria-label="Couleurs récentes"></div>
+        <label for="labSize">Épaisseur <output id="labSizeValue">14</output></label><input id="labSize" type="range" min="1" max="65" value="14">
+        <label for="labOpacity">Opacité <output id="labOpacityValue">90 %</output></label><input id="labOpacity" type="range" min="10" max="100" value="90">
+        <label for="labPaper">Support</label>
+        <select id="labPaper"><option value="#fffdf5">Papier ivoire</option><option value="#ffffff">Papier blanc</option><option value="#f8d8e8">Papier rose</option><option value="#d9edff">Papier bleu</option><option value="#c9a77a">Papier kraft</option><option value="#1b2540">Fond sombre</option></select>
+        <div class="lab-buttons">
+          <button id="labGrid" type="button" aria-pressed="false">▦ Grille</button>
+          <button id="labPerspective" type="button" aria-pressed="false">⌖ Point de fuite</button>
+        </div>
+        <p id="labExplain" class="lab-explain" aria-live="polite"></p>
+      </aside>
+      <div class="lab-main">
+        <div class="lab-stack" id="labStack">
+          <canvas id="labPaperCanvas" width="960" height="620" aria-hidden="true"></canvas>
+          <canvas id="labCanvas" width="960" height="620" aria-label="Toile de dessin : dessine avec le doigt, le stylet ou la souris."></canvas>
+          <canvas id="labGuides" width="960" height="620" aria-hidden="true"></canvas>
+        </div>
+        <p class="studio-caption">Avec un stylet, la pression change l'épaisseur. Les repères (grille, point de fuite) ne s'impriment pas sur ton image.</p>
+        <div class="lab-buttons">
+          <button id="labUndo" type="button">↶ Annuler</button>
+          <button id="labClear" type="button">Tout effacer</button>
+        </div>
+        <div class="lab-mission">
+          <h3>🎯 Défi d'artiste</h3>
+          <p id="labChallenge"></p>
+          <button id="labNewChallenge" type="button" class="linkish">Un autre défi ↻</button>
+          <label for="labReflection">J'explique mes choix plastiques</label>
+          <textarea id="labReflection" rows="2" maxlength="400" placeholder="J'ai utilisé… pour créer une impression de…" data-starters></textarea>
+          <div class="studio-bottom">
+            <button id="labSave" type="button" class="mini">✦ Ajouter au carnet</button>
+            <button id="labExport" type="button" class="mini ghost">⬇ Télécharger l'image</button>
+          </div>
+          <p id="labStatus" class="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="sub">Les 9 notions plastiques</h2>
+  <p class="sub-p">Touche une notion pour découvrir une piste d'expérimentation.</p>
+  <div class="concept-grid" id="concepts"></div>
+  <div class="concept-detail" id="concept-detail" aria-live="polite">Choisis une notion ci-dessus.</div>
+</section>
+
+<!-- TECHNIQUES -->
+<section id="techniques" class="view inner">
+  <div class="inner-head">
+    <h1>APPRENDS <em>EN CRÉANT</em></h1>
+    <p>Découvre une technique, vérifie que tu as compris, puis essaie-la en vrai et explique tes choix.</p>
+  </div>
+  <div class="filters">
+    <label for="techLevel">Mon niveau</label>
+    <select id="techLevel" data-grade-select><option value="all">Tous les niveaux</option><option value="6e">6e</option><option value="5e">5e</option><option value="4e">4e</option><option value="3e">3e</option></select>
+    <label for="techDomain">Questionnement</label>
+    <select id="techDomain"><option value="all">Tous</option><option value="representation">Représentation et images</option><option value="matiere">Matérialité et objet</option><option value="espace">Œuvre, espace, spectateur</option></select>
+    <span id="techProgress" class="count" aria-live="polite"></span>
+  </div>
+  <div class="tech-grid" id="techGrid"></div>
+  <div class="tech-player" id="techPlayer" hidden></div>
+</section>
+
+<!-- MUSÉE -->
+<section id="galerie" class="view inner">
+  <div class="inner-head">
+    <h1>LE <em>MUSÉE</em></h1>
+    <p>Chaque œuvre cache trois défis d'observation. Le premier te fait gagner la carte ; les suivants la font monter de niveau : ● commune, ◆ rare, ★ légendaire. Le niveau mesure ton regard, pas la valeur de l'œuvre.</p>
+  </div>
+  <div class="museum-wrap">
+    <div class="museum-summary">
+      <div><strong id="museumCollected">0 / 16</strong><span>cartes gagnées</span></div>
+      <div><strong id="museumSolved">0 / 48</strong><span>défis réussis</span></div>
+      <button class="mini" id="museumRandom" type="button">🎲 Une œuvre au hasard</button>
+    </div>
+    <div class="filters">
+      <label for="museumFilter">Notion</label>
+      <select id="museumFilter"><option value="all">Toutes</option><option>Couleur</option><option>Espace</option><option>Forme</option><option>Geste</option><option>Lumière</option><option>Matière</option><option>Outil</option><option>Support</option><option>Temps</option></select>
+      <label for="museumPratique">Pratique</label>
+      <select id="museumPratique"><option value="all">Toutes</option><option>Peinture</option><option>Sculpture</option><option>Estampe</option><option>Photographie</option><option>Architecture</option><option>Installation</option></select>
+      <label for="museumGrade">Niveau</label>
+      <select id="museumGrade"><option value="all">Tous</option><option>6e</option><option>5e</option><option>4e</option><option>3e</option></select>
+      <label for="museumOwned">Cartes</label>
+      <select id="museumOwned"><option value="all">Toutes</option><option value="collected">Gagnées</option><option value="uncollected">À gagner</option></select>
+    </div>
+    <div class="museum-grid" id="museumGrid"></div>
+    <div id="museumDetail" class="museum-detail" hidden></div>
+    <section class="museum-compare">
+      <h2>⚡ Duel d'œuvres</h2>
+      <p>Choisis deux œuvres : cherche ce qu'elles ont en commun et ce qui les distingue.</p>
+      <div class="museum-duo"><label>Œuvre A<select id="museumA"></select></label><label>Œuvre B<select id="museumB"></select></label></div>
+      <button class="mini" id="compareWorks" type="button">Comparer</button>
+      <div id="museumComparison" aria-live="polite"></div>
+    </section>
+  </div>
+</section>
+
+<!-- CARNET -->
+<section id="carnet" class="view inner">
+  <div class="inner-head">
+    <h1>MON <em>CARNET</em></h1>
+    <p>Tes créations, tes missions et tes idées. Le carnet reste sur cet appareil : pense à le sauvegarder pour ne rien perdre.</p>
+  </div>
+  <div class="carnet-tools no-print">
+    <label for="journalFilter">Afficher</label>
+    <select id="journalFilter"><option value="all">Tout</option><option value="mission">Missions</option><option value="creation">Créations</option><option value="technique">Techniques</option><option value="musee">Musée</option></select>
+    <button class="mini" id="printJournal" type="button">🖨 Imprimer / PDF</button>
+    <button class="mini ghost" id="exportJournal" type="button">💾 Sauvegarder</button>
+    <label class="mini ghost filebtn">📂 Restaurer<input type="file" id="importJournal" accept="application/json,.json"></label>
+  </div>
+  <p class="backup-hint no-print" id="backupHint" hidden></p>
+  <div class="print-head">Carnet d'artiste — Arts Attack! · <span id="printDate"></span></div>
+  <div id="journal" class="journal-grid"></div>
+  <button class="reset no-print" id="reset" type="button">Effacer tout le carnet de cet appareil</button>
+</section>
+</main>
+<footer>Arts Attack! · Arts plastiques au collège · Les compteurs mesurent ton exploration, pas ta note.</footer>
+</div>
+
+<!-- Dialogues -->
+<div class="dialog-backdrop" id="dialog" hidden>
+  <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+    <button class="close" id="closeDialog" type="button" aria-label="Fermer">×</button>
+    <span class="eyebrow">Défi express</span>
+    <h2 id="dialogTitle"></h2>
+    <p id="dialogPrompt"></p>
+    <div id="choices" class="choices"></div>
+    <label for="reflection">Explique ton idée</label>
+    <textarea id="reflection" rows="3" maxlength="500" placeholder="Je veux montrer…" data-starters></textarea>
+    <p id="feedback" class="status" aria-live="polite"></p>
+    <button class="cta" id="saveMission" type="button">Enregistrer dans mon carnet</button>
+  </section>
+</div>
+
+<div class="dialog-backdrop" id="lexique" hidden>
+  <section class="dialog lex" role="dialog" aria-modal="true" aria-labelledby="lexTitle">
+    <button class="close" type="button" aria-label="Fermer" data-close>×</button>
+    <h2 id="lexTitle">📖 Les mots de l'artiste</h2>
+    <label for="lexSearch" class="sr-only">Chercher un mot</label>
+    <input id="lexSearch" type="search" placeholder="Chercher un mot…" autocomplete="off">
+    <div id="lexList"></div>
+  </section>
+</div>
+
+<div id="artZoom" class="v51-zoom" hidden role="dialog" aria-modal="true" aria-label="Agrandissement de l'œuvre"><button type="button" aria-label="Fermer l'agrandissement">✕ Fermer</button><img alt=""></div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="core.js?v=6" defer></script>
+<script src="atelier.js?v=6" defer></script>
+<script src="missions.js?v=6" defer></script>
+<script src="techniques.js?v=6" defer></script>
+<script src="musee.js?v=6" defer></script>
+</body>
+</html>
